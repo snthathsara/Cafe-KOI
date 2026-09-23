@@ -1,0 +1,278 @@
+/* Reservations and Visit Section */
+.reservation-section {
+  padding-top: var(--section-spacing-y);
+  padding-bottom: var(--section-spacing-y);
+  position: relative;
+  background-color: var(--bg-surface-subtle);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--theme-transition);
+}
+
+.reservation-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 36px;
+}
+
+/* Reservation Form Card */
+.reservation-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  padding: 36px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+  transition: var(--theme-transition);
+}
+
+.form-group-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+/* Guest Selector Chips */
+.guest-chips-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.chip-btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 13.5px;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.chip-btn:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.chip-btn.is-selected {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border-color: var(--btn-primary-bg);
+  font-weight: 600;
+}
+
+/* Form Rows */
+.form-row-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 0 3px rgba(63, 92, 75, 0.15);
+}
+
+/* Submit Button */
+.btn-reserve-submit {
+  width: 100%;
+  padding: 15px;
+  border-radius: var(--radius-full);
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  transition: transform 0.2s var(--spring-ease), background 0.2s ease;
+}
+
+.btn-reserve-submit:hover {
+  transform: translateY(-2px);
+  background: var(--accent-green-soft);
+}
+
+/* Visit & Hours Card */
+.visit-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.visit-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  padding: 26px;
+  transition: var(--theme-transition);
+}
+
+.visit-card-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.visit-card-title svg {
+  color: var(--accent-green);
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hours-day {
+  color: var(--text-secondary);
+}
+
+.hours-time {
+  font-size: 13.5px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Map Graphic Card */
+.map-visual-card {
+  position: relative;
+  height: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: var(--brand-deep);
+}
+
+.map-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+  filter: contrast(1.05);
+}
+
+.map-pin-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-mint);
+  text-align: center;
+  background: rgba(5, 31, 32, 0.45);
+}
+
+.map-pin-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--accent-lamp);
+  margin-bottom: 4px;
+}
+
+.map-pin-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.map-pin-coords {
+  font-size: 12px;
+  color: var(--brand-sage);
+}
+
+/* Confirmation Success State */
+.reservation-success-box {
+  display: none;
+  text-align: center;
+  padding: 36px 16px;
+}
+
+.reservation-success-box.is-visible {
+  display: block;
+}
+
+.success-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(35, 83, 71, 0.18);
+  color: var(--accent-green);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.success-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.success-code {
+  font-size: 14px;
+  color: var(--accent-lamp);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.success-desc {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 440px;
+  margin: 0 auto 20px;
+}
+
+@media (max-width: 960px) {
+  .reservation-grid {
+    grid-template-columns: 1fr;
+  }
+}

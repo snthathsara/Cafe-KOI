@@ -1,0 +1,373 @@
+/* Atmospheric Luxury Cafe Hero Section */
+.hero-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding-top: 110px;
+  padding-bottom: 70px;
+  overflow: hidden;
+  background-color: var(--bg-page);
+  transition: var(--theme-transition);
+}
+
+/* Atmospheric Backdrop Layer for the Main Intro Section */
+.hero-backdrop-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-backdrop-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 75% 35%, var(--accent-lamp-glow) 0%, transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(0, 139, 155, 0.08) 0%, transparent 50%),
+    linear-gradient(to bottom, var(--bg-page) 0%, var(--bg-page) 100%);
+  transition: background 0.3s ease;
+}
+
+[data-theme="dark"] .hero-backdrop-overlay {
+  background: 
+    radial-gradient(ellipse at 75% 35%, rgba(192, 132, 252, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(0, 172, 193, 0.1) 0%, transparent 50%),
+    linear-gradient(to bottom, var(--bg-page) 0%, var(--bg-page) 100%);
+}
+
+/* Subtle ambient glow in background */
+.hero-ambient-glow {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--accent-lamp-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(60px);
+}
+
+.hero-rain-canvas {
+  display: none !important;
+}
+
+/* Hero Grid Layout */
+.hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* Left Column: Editorial Storytelling */
+.hero-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 24px;
+  width: fit-content;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: var(--theme-transition);
+}
+
+.hero-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent-lamp);
+  box-shadow: 0 0 8px var(--accent-lamp);
+}
+
+.hero-badge-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.hero-title {
+  font-size: var(--fs-display);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.hero-title em {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(26px, 3.4vw, 42px);
+  color: var(--accent-green);
+  letter-spacing: -0.01em;
+  margin-top: 6px;
+}
+
+[data-theme="dark"] .hero-title em {
+  color: var(--accent-green);
+}
+
+.hero-desc {
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin-bottom: 32px;
+}
+
+/* Hero CTA Row */
+.hero-actions-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  padding: 13px 26px;
+  border-radius: var(--radius-full);
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s var(--spring-ease), background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-hero-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.btn-hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: 1px solid var(--btn-secondary-border);
+  padding: 13px 24px;
+  border-radius: var(--radius-full);
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.25s var(--spring-ease), border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn-hero-secondary:hover {
+  border-color: var(--text-primary);
+  background: var(--bg-surface-subtle);
+  transform: translateY(-2px);
+}
+
+/* Warm Cafe Pillars */
+.hero-cafe-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.hero-feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.feature-card-label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.feature-card-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Right Column: Multi-Layered Visual Cafe Montage */
+.hero-visual-col {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-main-card {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-main-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.12);
+}
+
+.hero-main-photo {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.hero-main-card:hover .hero-main-photo {
+  transform: scale(1.03);
+}
+
+.hero-main-card-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(5, 31, 32, 0.9) 0%, rgba(5, 31, 32, 0.25) 70%, transparent 100%);
+  color: var(--brand-mint);
+}
+
+.hero-caption-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--brand-mint);
+  margin-bottom: 2px;
+}
+
+.hero-caption-meta {
+  font-size: 12px;
+  color: var(--brand-sage);
+}
+
+/* Floating Bakery Badge Card */
+.hero-floating-card-bottom {
+  position: absolute;
+  bottom: -20px;
+  left: -24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 10px 14px 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  max-width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.hero-floating-card-bottom:hover {
+  transform: translateY(-3px);
+}
+
+.floating-thumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.floating-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.floating-sub {
+  font-size: 11px;
+  color: var(--accent-green);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* Floating Amber Badge Top Right */
+.hero-floating-badge-top {
+  position: absolute;
+  top: -12px;
+  right: -16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  backdrop-filter: blur(10px);
+}
+
+.badge-lamp-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-lamp);
+}
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .hero-visual-col {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .hero-floating-card-bottom {
+    left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-cafe-features {
+    grid-template-columns: 1fr;
+  }
+  .hero-main-photo {
+    height: 380px;
+  }
+  .hero-floating-card-bottom {
+    position: static;
+    margin-top: 14px;
+    max-width: 100%;
+  }
+  .hero-floating-badge-top {
+    position: static;
+    margin-bottom: 14px;
+    width: fit-content;
+  }
+}

@@ -1,0 +1,243 @@
+/* Redesigned Story Section: Clean Architectural Editorial Panel */
+.story-section {
+  padding-top: var(--section-spacing-y);
+  padding-bottom: var(--section-spacing-y);
+  position: relative;
+  background-color: var(--bg-page);
+  transition: var(--theme-transition);
+}
+
+/* Clean Editorial Panel Container */
+.story-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: clamp(36px, 5vw, 64px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.03);
+  transition: var(--theme-transition);
+}
+
+[data-theme="dark"] .story-panel {
+  background: linear-gradient(180deg, #1C1915 0%, #161411 100%);
+  border-color: #2E2A24;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.25);
+}
+
+/* Header Text Architecture */
+.story-header-block {
+  max-width: 720px;
+  margin-bottom: 44px;
+}
+
+.story-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-green);
+  margin-bottom: 12px;
+}
+
+.story-title {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.story-title em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.story-lead-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 1.8vw, 22px);
+  line-height: 1.5;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Main Content Grid */
+.story-main-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 52px;
+  align-items: center;
+}
+
+/* Left Narrative & Clean Story Cards */
+.story-narrative-col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.story-prose {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* 3 Focused Craft Cards */
+.story-craft-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 12px;
+}
+
+.craft-card {
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.craft-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-dark);
+}
+
+.craft-card-tag {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent-lamp);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.craft-card-title {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.craft-card-desc {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* Heritage Key Figures Row */
+.story-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.story-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.story-stat-val {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-green);
+  letter-spacing: -0.02em;
+}
+
+[data-theme="dark"] .story-stat-val {
+  color: var(--accent-green);
+}
+
+.story-stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Right Column: Authentic Photography */
+.story-visual-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.story-image-main {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease;
+}
+
+.story-visual-wrap:hover .story-image-main {
+  transform: scale(1.02);
+}
+
+/* Craftsmanship Badge Overlay with Pine Icon */
+.story-badge-card {
+  position: absolute;
+  bottom: -18px;
+  left: -18px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
+  max-width: 270px;
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.badge-card-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--accent-green);
+  margin-bottom: 4px;
+}
+
+.badge-card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.badge-card-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.badge-card-meta {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .story-main-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .story-craft-cards {
+    grid-template-columns: 1fr;
+  }
+  .story-badge-card {
+    position: static;
+    margin-top: 14px;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café KOI & KOI Cakes — Specialty Coffee & Artisan Cakes</title>
+  <meta name="description" content="Specialty coffee, cycling serenity & bespoke artisan cakes handcrafted daily at 115/B D.S. Senanayake Veediya in Kandy, Sri Lanka. Savor wild blueberry cheesecakes, Belgian brownies, and custom celebration cakes.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Google Fonts: Fraunces (Chunky Retro Display Serif), Inter, Playfair Display, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <script>
+    try {
+      const theme = localStorage.getItem('koi-theme-preference-v2') || 'light';
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <!-- Floating Capsule Pill Navbar with Elastic Fluid Blob -->
+  <header class="site-header">
+    <nav class="nav-capsule-wrapper" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand" aria-label="Café KOI Home">
+        <div class="nav-brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C6.5 2 2 6.5 2 12c0 3.5 1.8 6.5 4.5 8.3L12 22l5.5-1.7C20.2 18.5 22 15.5 22 12c0-5.5-4.5-10-10-10Z"></path>
+            <path d="M12 7c-2 2-2 5 0 7s5 2 7 0"></path>
+          </svg>
+        </div>
+        <span>Café KOI</span>
+      </a>
+
+      <div class="nav-divider" aria-hidden="true"></div>
+
+      <!-- Links Track with Fluid Blob Indicator -->
+      <ul class="nav-links-track" id="nav-links-track">
+        <div class="nav-active-blob" id="nav-active-blob" aria-hidden="true"></div>
+        <li class="nav-link-item"><a href="#hero" class="nav-link is-active">Home</a></li>
+        <li class="nav-link-item"><a href="#story" class="nav-link">Our Story</a></li>
+        <li class="nav-link-item"><a href="#menu" class="nav-link">Menu</a></li>
+        <li class="nav-link-item"><a href="#specialties" class="nav-link">Specialties</a></li>
+        <li class="nav-link-item"><a href="#reservations" class="nav-link">Reserve</a></li>
+      </ul>
+
+      <div class="nav-divider" aria-hidden="true"></div>
+
+      <!-- Action Controls -->
+      <div class="nav-controls">
+        <!-- Theme Switcher Pill -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <span id="theme-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </span>
+        </button>
+
+        <!-- Quick Reserve CTA -->
+        <a href="#reservations" class="nav-cta-btn">Reserve</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Open mobile menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Slide-in Drawer -->
+    <div class="mobile-menu-drawer" id="mobile-menu-drawer">
+      <a href="#hero" class="mobile-nav-link">Home</a>
+      <a href="#story" class="mobile-nav-link">Our Story</a>
+      <a href="#menu" class="mobile-nav-link">Menu Offerings</a>
+      <a href="#specialties" class="mobile-nav-link">Specialties</a>
+      <a href="#reservations" class="mobile-nav-link">Hours & Reservations</a>
+      <a href="https://wa.me/94704006600?text=Hi%20Caf%C3%A9%20KOI%2C%20I%20would%20like%20to%20chat%20with%20the%20cafe." target="_blank" rel="noopener noreferrer" class="mobile-nav-link" style="color: var(--accent-green); display: flex; align-items: center; gap: 8px;">
+        <svg style="width: 17px; height: 17px; fill: currentColor;" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span>Chat on WhatsApp</span>
+      </a>
+      <a href="#reservations" class="mobile-nav-cta">Reserve a Table</a>
+    </div>
+  </header>
+
+  <!-- Main Content Flow -->
+  <main>
+    <!-- Section 1: Editorial Hero with Repeating Stacked Display Typography & Floating Cutout Cake -->
+    <section class="hero-editorial-section" id="hero">
+      <div class="container">
+        <!-- Live Cafe Status Pill -->
+        <div class="hero-status-pill-wrap">
+          <div class="badge-pill hero-status-badge">
+            <span class="status-pulse-dot"></span>
+            <span style="font-size: 13.5px; font-weight: 600; color: var(--text-primary);">
+              <span id="cafe-status-label">Open Today</span> · <span id="cafe-status-sub" style="font-weight: 400; color: var(--text-secondary);">Serving specialty coffee & cakes until 7:00 PM</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Giant Repeating Stacked Typography with Floating Real Cake -->
+        <div class="hero-stacked-wrap">
+          <h1 class="hero-stacked-title">
+            <span class="hero-stacked-line">CAFÉ KOI</span>
+            <span class="hero-stacked-line">CAFÉ KOI</span>
+            <span class="hero-stacked-line">KOI CAKES</span>
+          </h1>
+
+          <!-- Real Blueberry Cheesecake Cutout Floating Over Headline (100% Transparent Background) -->
+          <img 
+            src="/cake-blueberry-cutout.png" 
+            alt="Real Signature Blueberry Cheesecake Cutout on Black Plate" 
+            class="hero-floating-cutout"
+            title="Café KOI Signature Blueberry Cheesecake"
+          />
+        </div>
+
+        <p class="hero-editorial-sub">
+          Specialty coffee, cycling serenity & bespoke artisan cakes handcrafted daily at <strong>115/B D.S. Senanayake Veediya, Kandy</strong>.
+        </p>
+
+        <div class="hero-pills-row">
+          <a href="#reservations" class="pill-action-btn">
+            <span>Reserve a Table</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+          <a href="#menu" class="pill-action-btn-outline">
+            <span>Explore Menu</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Solid Cobalt Blue Banner (Our Philosophy / Origins & Collage) -->
+    <section class="cobalt-banner-section" id="story">
+      <div class="container">
+        <div class="cobalt-banner-grid">
+          <!-- Left: Editorial Prose & Origin Narrative -->
+          <div>
+            <span class="cobalt-pill-tag" style="margin-bottom: 20px;">
+              Philosophy & Dedication
+            </span>
+            <h2 class="cobalt-banner-title">
+              Every recipe begins with pure cream dairy butter, single-origin espresso, and slow dedication in Kandy.
+            </h2>
+            <p class="cobalt-banner-prose">
+              Founded moments from Kandy Lake and Queen's Hotel, Café KOI and our custom studio KOI Cakes bring together specialty coffee craft, cozy cycling aesthetics, and scratch-baked cakes. From our celebrated wild blueberry cheesecake to bespoke multi-tiered wedding showstoppers, every creation is baked fresh with genuine care.
+            </p>
+            <div class="cobalt-pill-tags">
+              <span class="cobalt-pill-tag">100% Scratch-Baked</span>
+              <span class="cobalt-pill-tag">115/B D.S. Senanayake Veediya</span>
+              <span class="cobalt-pill-tag">Daily 9:00 AM – 7:00 PM</span>
+              <span class="cobalt-pill-tag">KOI Cakes Studio</span>
+            </div>
+          </div>
+
+          <!-- Right: Asymmetrical Collage with Layered Photos -->
+          <div class="cobalt-collage-wrap">
+            <div class="collage-card-main">
+              <img 
+                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=85" 
+                alt="Cozy peaceful cafe seating at Café KOI Kandy" 
+              />
+            </div>
+            <div class="collage-card-secondary">
+              <img 
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=500&q=80" 
+                alt="Barista brewing specialty espresso" 
+              />
+            </div>
+            <!-- Floating mini pastry thumbnail -->
+            <img 
+              src="/cake-blueberry-tight.png" 
+              alt="Floating cake" 
+              class="collage-cutout-floating" 
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Alternating Editorial Menu (Circular Vignettes + Classical Price List) -->
+    <section class="editorial-menu-section" id="menu">
+      <div class="container">
+        <div class="editorial-menu-header">
+          <span class="section-label" style="display: inline-block; margin-bottom: 8px;">From Our Bakehouse & Bar</span>
+          <h2 class="editorial-menu-title">Our Seasonal Menu</h2>
+          <p class="editorial-menu-sub">
+            Prepared fresh each morning using premium dairy butter, rich Belgian cocoa, and high-altitude specialty beans.
+          </p>
+        </div>
+
+        <div class="editorial-menu-rows">
+          <!-- Row 1: Left Circular Vignette (Cheesecake) · Right Classical Price List (Homemade Cakes) -->
+          <div class="editorial-row">
+            <div class="editorial-vignette-col">
+              <div class="vignette-frame">
+                <img src="/cake-blueberry-clean.png" alt="Signature Blueberry Cheesecake" class="vignette-img" />
+              </div>
+            </div>
+            <div class="editorial-list-col">
+              <span class="menu-category-badge">Homemade Cakes & Cheesecakes</span>
+              <div class="menu-price-items-list">
+                <div class="price-item-row">
+                  <div class="price-item-top">
+                    <span class="price-item-name">Signature Blueberry Cheesecake</span>
+                    <span class="price-item-val">Rs. 950</span>
+                  </div>
+                  <p class="price-item-desc">Baked velvety cream cheese layer with whole wild blueberries, house-made compote, and golden biscuit crumb.</p>
+                </div>
+                <div class="price-item-row">
+                  <div class="price-item-top">
+                    <span class="price-item-name">Belgian Double Chocolate Brownie</span>
+                    <span class="price-item-val">Rs. 750</span>
+                  </div>
+                  <p class="price-item-desc">Ultra-dense, chewy chocolate brownie loaded with 70% dark Belgian cocoa and a crinkled top.</p>
+                </div>
+                <div class="price-item-row">
+                  <div class="price-item-top">
+                    <span class="price-item-name">Espresso Savoiardi Tiramisu</span>
+                    <span class="price-item-val">Rs. 890</span>
+                  </div>
+                  <p class="price-item-desc">Savoiardi ladyfingers steeped in freshly extracted KOI espresso, layered with whipped Italian mascarpone.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2 (Reversed): Left Classical Price List (Custom Studio) · Right Circular Vignette (Bespoke Cake) -->
+          <div class="editorial-row is-reversed">
+            <div class="editorial-vignette-col">
+              <div class="vignette-frame">
+                <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=600&q=80" alt="Botanical Tiered Celebration Cake" class="vignette-img" />
+              </div>
+            </div>
+            <div class="editorial-list-col">
+              <span class="menu-category-badge">KOI Cakes Custom Studio</span>
+              <div class="menu-price-items-list">
+                <div class="price-item-row">
+                  <div class="price-item-top">
+                    <span class="price-item-name">Bespoke Custom Bento Box</span>
+                    <span class="price-item-val">From Rs. 2,800</span>
+                  </div>
+                  <p class="price-item-desc">Handcrafted 4-inch mini celebration cake with customized pastel frosting and personalized lettering.</p>
+                </div>
+                <div class="price-item-row">
+                  <div class="price-item-top">
+                    <span class="price-item-name">Botanical Tiered Wedding Cake</span>
+                    <span class="price-item-val">Bespoke Quote</span>
+                  </div>
+                  <p class="price-item-desc">Architectural multi-tiered centerpiece tailored for weddings with wafer florals and edible gold leaf.</p>
+                </div>
+                <div class="price-item-row">
+                  <div class="price-item-top">
+                    <span class="price-item-name">Personalized Milestone Cake</span>
+                    <span class="price-item-val">From Rs. 4,500</span>
+                  </div>
+                  <p class="price-item-desc">6-inch or 8-inch multi-layered birthday showstopper in signature Belgian cocoa or berry vanilla sponge.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3: Left Circular Vignette (Coffee) · Right Classical Price List (Specialty Coffee) -->
+          <div class="editorial-row">
+            <div class="editorial-vignette-col">
+              <div class="vignette-frame">
+                <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80" alt="KOI Signature Iced Spanish Latte" class="vignette-img" />
+              </div>
+            </div>
+            <div class="editorial-list-col">
+              <span class="menu-category-badge">Specialty Coffee & Espresso Bar</span>
+              <div class="menu-price-items-list">
+                <div class="price-item-row">
+                  <div class="price-item-top">
+                    <span class="price-item-name">KOI Signature Iced Spanish Latte</span>
+                    <span class="price-item-val">Rs. 720</span>
+                  </div>
+                  <p class="price-item-desc">Double ristretto espresso pulled over chilled condensed milk, fresh milk, and velvety microfoam.</p>
+                </div>
+                <div class="price-item-row">
+                  <div class="price-item-top">
+                    <span class="price-item-name">Artisan Flat White & Cortado</span>
+                    <span class="price-item-val">Rs. 620</span>
+                  </div>
+                  <p class="price-item-desc">Precision double espresso combined 1:1 with textured microfoam, poured with delicate latte art.</p>
+                </div>
+                <div class="price-item-row">
+                  <div class="price-item-top">
+                    <span class="price-item-name">Red Velvet & Blue Butterfly Latte</span>
+                    <span class="price-item-val">Rs. 750</span>
+                  </div>
+                  <p class="price-item-desc">Cafe KOI’s signature botanical infusion with natural blue pea flower, steamed milk, and espresso.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 4 (Reversed): Left Classical Price List (Bites) · Right Circular Vignette (Brownie / Bites) -->
+          <div class="editorial-row is-reversed">
+            <div class="editorial-vignette-col">
+              <div class="vignette-frame">
+                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Belgian Double Chocolate Brownie" class="vignette-img" />
+              </div>
+            </div>
+            <div class="editorial-list-col">
+              <span class="menu-category-badge">Warm Cafe Bites & Savories</span>
+              <div class="menu-price-items-list">
+                <div class="price-item-row">
+                  <div class="price-item-top">
+                    <span class="price-item-name">Toasted Brioche Chicken Melt</span>
+                    <span class="price-item-val">Rs. 1,150</span>
+                  </div>
+                  <p class="price-item-desc">Golden brioche toasted with herb-roasted chicken, melted aged cheddar, and whole grain mustard aioli.</p>
+                </div>
+                <div class="price-item-row">
+                  <div class="price-item-top">
+                    <span class="price-item-name">Artisan Eclair & Choux Pastry</span>
+                    <span class="price-item-val">Rs. 680</span>
+                  </div>
+                  <p class="price-item-desc">Crisp choux pastry filled with diplomat vanilla bean cream and finished with dark chocolate glaze.</p>
+                </div>
+                <div class="price-item-row">
+                  <div class="price-item-top">
+                    <span class="price-item-name">Single-Origin Cold Brew & Tonic</span>
+                    <span class="price-item-val">Rs. 680</span>
+                  </div>
+                  <p class="price-item-desc">18-hour cold steeped single-origin coffee served over crystal ice with sparkling citrus tonic.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Typographic Callout Ribbon & 3 Cobalt Packaging Cards -->
+    <section class="order-callout-section" id="order">
+      <div class="container">
+        <div class="stacked-order-wrap">
+          <h2 class="stacked-order-title">
+            ORDER NOW<br>
+            ORDER NOW<br>
+            ORDER NOW
+          </h2>
+          <img src="/cake-blueberry-cutout.png" alt="Signature Cake" class="order-pedestal-cake">
+        </div>
+
+        <!-- 3 Branded Cobalt Blue Packaging Cards -->
+        <div class="packaging-cards-grid">
+          <!-- Card 1: Takeaway & Counter Pickup -->
+          <div class="packaging-card">
+            <div class="packaging-card-visual">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                <path d="M3 6h18"></path>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </div>
+            <h3 class="packaging-card-title">Takeaway & Pickup</h3>
+            <p class="packaging-card-desc">
+              Grab your morning single-origin espresso and fresh blueberry cheesecake slice on the go in sustainable packaging.
+            </p>
+            <a href="#reservations" class="packaging-card-btn">Order Pickup</a>
+          </div>
+
+          <!-- Card 2: KOI Custom Studio -->
+          <div class="packaging-card">
+            <div class="packaging-card-visual">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m7.5 4.27 9 5.15"></path>
+                <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+                <path d="m3.3 7 8.7 5 8.7-5"></path>
+                <path d="M12 22V12"></path>
+              </svg>
+            </div>
+            <h3 class="packaging-card-title">KOI Custom Studio</h3>
+            <p class="packaging-card-desc">
+              Handcrafted bento cakes, birthday showstoppers, and personalized milestone tiers made to order in Kandy.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 4px;">
+              <a href="https://wa.me/94704006600?text=Hi%20KOI%20Cakes%2C%20I%20would%20like%20to%20order%20a%20custom%20cake." target="_blank" rel="noopener noreferrer" class="packaging-card-btn">
+                Order on WhatsApp
+              </a>
+              <a href="https://www.instagram.com/koi_cakes/" target="_blank" rel="noopener noreferrer" class="packaging-card-btn" style="background: transparent; border: 1px solid var(--border-color); color: var(--brand-mint) !important;">
+                Instagram
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Celebration Gifting -->
+          <div class="packaging-card">
+            <div class="packaging-card-visual">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="8" width="18" height="4" rx="1"></rect>
+                <path d="M12 8v13"></path>
+                <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path>
+                <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path>
+              </svg>
+            </div>
+            <h3 class="packaging-card-title">Celebration Gifting</h3>
+            <p class="packaging-card-desc">
+              Curated dessert boxes of Belgian brownies, artisanal eclairs, and whole cheesecakes for celebrations and corporate events.
+            </p>
+            <a href="#reservations" class="packaging-card-btn">Inquire Gifting</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Solid Cobalt Blue Band — Our Specialties (3 + 2 Circular Badges) -->
+    <section class="specialties-blue-section" id="specialties">
+      <div class="container">
+        <h2 class="specialties-header-title">Our Specialties</h2>
+        <p class="specialties-header-sub">
+          The five most celebrated creations baked and brewed fresh daily at Café KOI.
+        </p>
+
+        <div class="specialties-badges-wrap">
+          <!-- Top Row: 3 Circular Badges -->
+          <div class="specialties-row-3">
+            <a href="#menu" class="specialty-badge-card">
+              <div class="specialty-badge-circle">
+                <img src="/cake-blueberry-clean.png" alt="Signature Blueberry Cheesecake" />
+              </div>
+              <span class="specialty-badge-name">Blueberry Cheesecake</span>
+              <span class="specialty-badge-price">Rs. 950</span>
+            </a>
+
+            <a href="#menu" class="specialty-badge-card">
+              <div class="specialty-badge-circle">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80" alt="KOI Custom Bento Cake" />
+              </div>
+              <span class="specialty-badge-name">Custom Bento Cake</span>
+              <span class="specialty-badge-price">From Rs. 2,800</span>
+            </a>
+
+            <a href="#menu" class="specialty-badge-card">
+              <div class="specialty-badge-circle">
+                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=400&q=80" alt="Belgian Fudge Brownie" />
+              </div>
+              <span class="specialty-badge-name">Belgian Fudge Brownie</span>
+              <span class="specialty-badge-price">Rs. 750</span>
+            </a>
+          </div>
+
+          <!-- Bottom Row: 2 Circular Badges -->
+          <div class="specialties-row-2">
+            <a href="#menu" class="specialty-badge-card">
+              <div class="specialty-badge-circle">
+                <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=400&q=80" alt="Espresso Tiramisu" />
+              </div>
+              <span class="specialty-badge-name">Espresso Tiramisu</span>
+              <span class="specialty-badge-price">Rs. 890</span>
+            </a>
+
+            <a href="#menu" class="specialty-badge-card">
+              <div class="specialty-badge-circle">
+                <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=400&q=80" alt="Iced Spanish Latte" />
+              </div>
+              <span class="specialty-badge-name">Iced Spanish Latte</span>
+              <span class="specialty-badge-price">Rs. 720</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Atmosphere & Review Bubble Section -->
+    <section class="community-story-section" id="atmosphere">
+      <div class="container">
+        <div class="community-grid">
+          <!-- Left: Narrative & Customer Speech Bubble -->
+          <div>
+            <span class="section-label" style="display: inline-block; margin-bottom: 8px;">Kandy Sanctuary</span>
+            <div class="community-quote-block">
+              "A quiet sanctuary of warm specialty coffee, cycling aesthetics, and peaceful afternoons."
+            </div>
+            <p class="community-prose">
+              Step in from the lively streets of D.S. Senanayake Veediya into an air-conditioned retreat filled with the rich aroma of freshly pulled espresso and butter-baked pastries. Enjoy a friendly game of Jenga, catch up on reading, or unwind with friends over slow coffee.
+            </p>
+
+            <!-- Review Speech Bubble -->
+            <div class="review-bubble-card">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                "Hands down the best blueberry cheesecake in Sri Lanka. The crust has the perfect buttery crunch, and paired with their iced Spanish latte, it is pure bliss."
+              </p>
+              <div class="review-author">— Dr. Ananya Senanayake · Kandy Local Guide</div>
+            </div>
+          </div>
+
+          <!-- Right: Atmospheric Photos -->
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="border-radius: 18px; overflow: hidden; box-shadow: 0 16px 36px rgba(0,0,0,0.12);">
+              <img 
+                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" 
+                alt="Cozy interior at Café KOI" 
+                style="width: 100%; height: 280px; object-fit: cover; display: block;"
+              />
+            </div>
+            <div style="border-radius: 18px; overflow: hidden; box-shadow: 0 16px 36px rgba(0,0,0,0.12);">
+              <img 
+                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" 
+                alt="Artisan latte art" 
+                style="width: 100%; height: 220px; object-fit: cover; display: block;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Reservations & Visit Engine -->
+    <section class="reservation-section" id="reservations">
+      <div class="container">
+        <div style="max-width: 640px; margin-bottom: 36px;">
+          <span class="section-label">Visit & Inquiries</span>
+          <h2 class="section-title">Reserve Your Table at <em>Café KOI</em></h2>
+          <p style="color: var(--text-secondary); font-size: 15.5px; line-height: 1.6;">
+            We hold both reserved tables and walk-in counter seats daily. For celebrations, gatherings, or bespoke cake inquiries, reservations are warmly welcomed.
+          </p>
+        </div>
+
+        <div class="reservation-grid">
+          <!-- Left: Reservation Engine Form -->
+          <div class="reservation-card">
+            <form id="reservation-form">
+              <input type="hidden" id="res-guests-hidden" value="2">
+
+              <!-- Guests Selector -->
+              <div class="form-group-title">Party Size</div>
+              <div class="guest-chips-row">
+                <button type="button" class="chip-btn guest-chip" data-guests="1">1 Guest</button>
+                <button type="button" class="chip-btn guest-chip is-selected" data-guests="2">2 Guests</button>
+                <button type="button" class="chip-btn guest-chip" data-guests="3">3 Guests</button>
+                <button type="button" class="chip-btn guest-chip" data-guests="4">4 Guests</button>
+                <button type="button" class="chip-btn guest-chip" data-guests="6">6 Guests</button>
+                <button type="button" class="chip-btn guest-chip" data-guests="8">8 Guests (Large Table)</button>
+              </div>
+
+              <!-- Date & Time Row -->
+              <div class="form-row-dual">
+                <div class="form-field">
+                  <label class="form-label" for="res-date">Date</label>
+                  <input type="date" id="res-date" class="form-input" required>
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="res-time">Time</label>
+                  <select id="res-time" class="form-select" required>
+                    <option value="10:00 AM">10:00 AM · Morning Espresso & Pastry</option>
+                    <option value="12:00 PM">12:00 PM · Cafe Lunch & Brioche</option>
+                    <option value="2:30 PM">2:30 PM · Afternoon Coffee & Cakes</option>
+                    <option value="5:00 PM" selected>5:00 PM · Evening Coffee & Dessert</option>
+                    <option value="6:15 PM">6:15 PM · Late Afternoon Gathering</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Contact Row -->
+              <div class="form-row-dual">
+                <div class="form-field">
+                  <label class="form-label" for="res-name">Your Name</label>
+                  <input type="text" id="res-name" class="form-input" placeholder="e.g. Sarah Perera" required>
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="res-email">Email Address</label>
+                  <input type="email" id="res-email" class="form-input" placeholder="sarah@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-field" style="margin-bottom: 20px;">
+                <label class="form-label" for="res-notes">Special Requests or Custom Cake Notes (Optional)</label>
+                <textarea id="res-notes" rows="2" class="form-textarea" placeholder="Celebration details, custom cake inquiry, quiet table preference..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-reserve-submit">
+                <span>Confirm Table Reservation</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </button>
+            </form>
+
+            <!-- Success Confirmation Screen -->
+            <div class="reservation-success-box" id="reservation-success-box">
+              <div class="success-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="success-title">Your Table is Prepared</h3>
+              <div class="success-code" id="success-code-display">Reservation #KOI-8492</div>
+              <p class="success-desc" id="success-details-display"></p>
+
+              <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <button type="button" class="btn-hero-primary" id="download-calendar-btn" style="padding: 10px 20px; font-size: 13.5px;">
+                  Add to Calendar (.ics)
+                </button>
+                <button type="button" class="btn-hero-secondary" id="book-another-btn" style="padding: 10px 20px; font-size: 13.5px;">
+                  Make Another Reservation
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Visit & Location Info -->
+          <div class="visit-info-column" id="visit">
+            <div class="visit-card">
+              <h3 class="visit-card-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Hours of Slow Gatherings
+              </h3>
+              <div class="hours-list">
+                <div class="hours-row">
+                  <span class="hours-day">Monday – Thursday</span>
+                  <span class="hours-time">9:00 AM – 7:00 PM</span>
+                </div>
+                <div class="hours-row">
+                  <span class="hours-day">Friday – Sunday</span>
+                  <span class="hours-time">9:00 AM – 7:30 PM</span>
+                </div>
+                <div class="hours-row">
+                  <span class="hours-day">Fresh Cake Bakehouse</span>
+                  <span class="hours-time">From 9:00 AM Daily</span>
+                </div>
+                <div class="hours-row" style="border: none;">
+                  <span class="hours-day">KOI Custom Cake Consultations</span>
+                  <span class="hours-time">Daily Orders Welcome</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Styled Map Visual -->
+            <div class="map-visual-card">
+              <img 
+                src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=800&q=80" 
+                alt="Scenic view near Kandy Lake" 
+                class="map-bg-image"
+              />
+              <div class="map-pin-overlay">
+                <div class="map-pin-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="map-pin-title">Café KOI & KOI Cakes</div>
+                <div class="map-pin-coords">115/B D.S. Senanayake Veediya · Kandy, Sri Lanka</div>
+              </div>
+            </div>
+
+            <!-- Contact & Transit -->
+            <div class="visit-card" style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              <p style="margin-bottom: 6px;">
+                <strong>Arrival:</strong> 2 blocks from Queen’s Hotel and Kandy Lake. Walking distance from the Temple of the Sacred Tooth Relic.
+              </p>
+              <p style="margin-bottom: 6px;">
+                <strong>Inquiries:</strong> +94 70 400 6600 · +94 77 626 2996
+              </p>
+              <p style="margin-bottom: 12px;">
+                <strong>Instagram:</strong>
+                <a href="https://www.instagram.com/cafe_koi/" target="_blank" rel="noopener noreferrer" style="color: var(--brand-cobalt); text-decoration: underline; font-weight: 600;">@cafe_koi</a> ·
+                <a href="https://www.instagram.com/koi_cakes/" target="_blank" rel="noopener noreferrer" style="color: var(--brand-purple); text-decoration: underline; font-weight: 600;">@koi_cakes</a>
+              </p>
+              <a href="https://wa.me/94704006600?text=Hi%20Caf%C3%A9%20KOI%2C%20I%20would%20like%20to%20chat%20about%20visiting%20and%20reservations." target="_blank" rel="noopener noreferrer" class="visit-whatsapp-action">
+                <span class="whatsapp-icon-circle">
+                  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                </span>
+                <span>Chat with Café KOI on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Section 8: Cobalt Blue Luxury Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-row">
+        <!-- Brand column -->
+        <div class="footer-brand-col">
+          <a href="#hero" class="footer-logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.5 2 2 6.5 2 12c0 3.5 1.8 6.5 4.5 8.3L12 22l5.5-1.7C20.2 18.5 22 15.5 22 12c0-5.5-4.5-10-10-10Z"></path>
+              <path d="M12 7c-2 2-2 5 0 7s5 2 7 0"></path>
+            </svg>
+            <span>Café KOI</span>
+          </a>
+          <p class="footer-tagline">
+            Specialty coffee, cycling serenity & bespoke artisan cakes handcrafted daily in the heart of historic Kandy, Sri Lanka.
+          </p>
+        </div>
+
+        <!-- Links: Experience -->
+        <div>
+          <div class="footer-col-title">Experience</div>
+          <ul class="footer-links-list">
+            <li><a href="#hero" class="footer-link">The Sanctuary</a></li>
+            <li><a href="#story" class="footer-link">Our Story & Heritage</a></li>
+            <li><a href="#menu" class="footer-link">Seasonal Menu</a></li>
+            <li><a href="#specialties" class="footer-link">Specialties</a></li>
+            <li><a href="#reservations" class="footer-link">Table Reservations</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: Hours & Contact -->
+        <div>
+          <div class="footer-col-title">Sanctuary</div>
+          <ul class="footer-links-list">
+            <li><span class="footer-link">115/B D.S. Senanayake Veediya</span></li>
+            <li><span class="footer-link">Kandy, Sri Lanka</span></li>
+            <li><a href="https://wa.me/94704006600?text=Hi%20Caf%C3%A9%20KOI%2C%20I%20would%20like%20to%20chat%20with%20the%20cafe." target="_blank" rel="noopener noreferrer" class="footer-link" style="color: var(--brand-mint); font-weight: 600;">WhatsApp: +94 70 400 6600</a></li>
+            <li><a href="https://www.instagram.com/cafe_koi/" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram: @cafe_koi</a></li>
+            <li><a href="https://www.instagram.com/koi_cakes/" target="_blank" rel="noopener noreferrer" class="footer-link">Custom Cakes: @koi_cakes</a></li>
+            <li><span class="footer-link">Daily 9:00 AM – 7:00 PM</span></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter column -->
+        <div class="footer-newsletter-col">
+          <div class="footer-col-title">The KOI Journal</div>
+          <p style="font-size: 13.5px; color: rgba(218, 241, 222, 0.85); line-height: 1.5;">
+            Seasonal baker’s dispatches, single-origin coffee notes, and tasting evening invitations.
+          </p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email address for newsletter">
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+          <div class="newsletter-note" id="newsletter-note">Dispatched once monthly. Restful reading.</div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-row">
+        <div class="footer-coords">7.2906° N, 80.6337° E · Kandy Central Province Elevation 500m</div>
+        <div>© 2026 Café KOI & KOI Cakes. Handcrafted with Care in Kandy.</div>
+        <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to top">
+          <span>Back to Top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Chat Widget -->
+  <a 
+    href="https://wa.me/94704006600?text=Hi%20Caf%C3%A9%20KOI%2C%20I%20would%20like%20to%20chat%20and%20inquire%20about%20your%20cakes%20%26%20table%20reservations." 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="floating-whatsapp-btn" 
+    id="floating-whatsapp-btn"
+    aria-label="Chat with Café KOI on WhatsApp"
+  >
+    <span class="whatsapp-icon-circle">
+      <span class="whatsapp-pulse-dot"></span>
+      <svg viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+    </span>
+    <span class="whatsapp-btn-text">
+      <span class="whatsapp-btn-primary">Chat with Café</span>
+      <span class="whatsapp-btn-sub">Usually replies fast</span>
+    </span>
+  </a>
+
+  <!-- Application Bundle -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

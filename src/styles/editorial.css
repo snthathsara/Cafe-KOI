@@ -1,0 +1,1101 @@
+/* ==========================================================================
+   Café KOI — Botanical Sanctuary Palette (Forest Green & Pale Mint Cream)
+   Exact Swatches: #051F20 | #0B2B26 | #163832 | #235347 | #8EB69B | #DAF1DE
+   Zero harsh #FFFFFF — Eye-soothing velvet mint & deep forest gradients
+   ========================================================================== */
+
+/* Stacked Display Typography Header */
+.hero-editorial-section {
+  position: relative;
+  padding-top: 130px;
+  padding-bottom: 75px;
+  background: var(--bg-page-gradient);
+  overflow: hidden;
+  text-align: center;
+  transition: var(--theme-transition);
+}
+
+/* Atmospheric Ambient Light Beam from top-left (from reference image) */
+.hero-editorial-section::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  width: 65%;
+  height: 80%;
+  background: radial-gradient(ellipse at 35% 35%, rgba(142, 182, 155, 0.35) 0%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-status-pill-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 20px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 15px rgba(5, 31, 32, 0.06);
+}
+
+.status-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--brand-emerald);
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(35, 83, 71, 0.5);
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+/* Stacked Title Wrap with 1:1 Reference Alignment */
+.hero-stacked-wrap {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 36px auto;
+  user-select: none;
+  max-width: 100%;
+  z-index: 2;
+}
+
+.hero-stacked-title {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 8.2vw, 104px);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.035em;
+  color: var(--brand-pine);
+  text-transform: uppercase;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+/* Dark Mode: Luminous Pale Mint glow */
+[data-theme="dark"] .hero-stacked-title {
+  color: #DAF1DE;
+  text-shadow: 0 0 50px rgba(142, 182, 155, 0.45);
+}
+
+.hero-stacked-line {
+  display: block;
+  white-space: nowrap;
+  transition: transform 0.4s var(--spring-ease);
+}
+
+.hero-stacked-line:nth-child(1) {
+  transform: translateX(4%);
+}
+
+.hero-stacked-line:nth-child(2) {
+  transform: translateX(-4%);
+}
+
+.hero-stacked-line:nth-child(3) {
+  transform: translateX(4%);
+}
+
+/* Floating Real Cutout Cake breaking through text (100% TRANSPARENT BACKGROUND) */
+.hero-floating-cutout {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-4deg);
+  width: clamp(170px, 24vw, 320px);
+  height: auto;
+  z-index: 5;
+  filter: drop-shadow(0 20px 30px rgba(5, 31, 32, 0.4));
+  animation: gentleFloat 5s ease-in-out infinite;
+  pointer-events: none;
+  user-select: none;
+  transition: transform 0.4s var(--spring-ease), filter 0.4s ease;
+}
+
+.hero-stacked-wrap:hover .hero-floating-cutout {
+  transform: translate(-50%, -53%) rotate(0deg) scale(1.06);
+  filter: drop-shadow(0 28px 45px rgba(5, 31, 32, 0.5));
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(-4deg);
+  }
+  50% {
+    transform: translate(-50%, -55%) rotate(-2deg);
+  }
+}
+
+.hero-editorial-sub {
+  font-family: var(--font-sans);
+  font-size: clamp(15px, 1.8vw, 18px);
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin: 0 auto 28px auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-pills-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.pill-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background-color: var(--brand-forest);
+  color: #DAF1DE !important;
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: transform 0.2s var(--spring-ease), background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(5, 31, 32, 0.25);
+}
+
+.pill-action-btn:hover {
+  background-color: var(--brand-pine);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(5, 31, 32, 0.35);
+}
+
+.pill-action-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 26px;
+  background-color: transparent;
+  color: var(--brand-forest) !important;
+  border: 1.5px solid var(--brand-forest);
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .pill-action-btn-outline {
+  color: #DAF1DE !important;
+  border-color: #8EB69B;
+}
+
+.pill-action-btn-outline:hover {
+  background-color: rgba(35, 83, 71, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Solid Forest Green Gradient Banner (Our Philosophy / Origins & Collage)
+   ========================================================================== */
+.cobalt-banner-section {
+  background: var(--banner-gradient);
+  color: #DAF1DE;
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.cobalt-banner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.cobalt-banner-title {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.8vw, 42px);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #DAF1DE;
+  margin-bottom: 24px;
+}
+
+.cobalt-banner-prose {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(218, 241, 222, 0.9);
+  margin-bottom: 30px;
+}
+
+.cobalt-pill-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cobalt-pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: rgba(142, 182, 155, 0.18);
+  border: 1px solid rgba(218, 241, 222, 0.35);
+  color: #DAF1DE;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(8px);
+}
+
+/* Asymmetrical Collage with Soft Sage / Celadon Borders */
+.cobalt-collage-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 380px;
+}
+
+.collage-card-main {
+  width: 280px;
+  height: 340px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  border: 4px solid #8EB69B;
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+}
+
+.collage-card-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collage-card-secondary {
+  position: absolute;
+  bottom: -15px;
+  right: 15px;
+  width: 190px;
+  height: 210px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  border: 4px solid #8EB69B;
+  transform: rotate(5deg);
+  transition: transform 0.3s ease;
+}
+
+.collage-card-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collage-cutout-floating {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 100px;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.4));
+  transform: rotate(-10deg);
+  animation: floatMini 4s ease-in-out infinite;
+}
+
+@keyframes floatMini {
+  0%, 100% { transform: translateY(0) rotate(-10deg); }
+  50% { transform: translateY(-8px) rotate(-6deg); }
+}
+
+/* ==========================================================================
+   Editorial Alternating Menu (Circular Vignettes + Classical Price List)
+   ========================================================================== */
+.editorial-menu-section {
+  padding: 95px 0;
+  background: var(--bg-page-gradient);
+  transition: var(--theme-transition);
+}
+
+.editorial-menu-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.editorial-menu-title {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 800;
+  color: var(--brand-pine);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+[data-theme="dark"] .editorial-menu-title {
+  color: #DAF1DE;
+}
+
+.editorial-menu-sub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Alternating Rows */
+.editorial-menu-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.editorial-row {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.editorial-row.is-reversed {
+  grid-template-columns: 1.25fr 1fr;
+}
+
+.editorial-row.is-reversed .editorial-vignette-col {
+  order: 2;
+}
+
+.editorial-row.is-reversed .editorial-list-col {
+  order: 1;
+}
+
+/* Circular Vignette with Etched Forest & Sage Rings */
+.editorial-vignette-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vignette-frame {
+  position: relative;
+  width: clamp(200px, 24vw, 280px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  padding: 10px;
+  background: var(--bg-surface);
+  box-shadow: 
+    0 0 0 2px var(--brand-emerald),
+    0 0 0 6px var(--bg-page),
+    0 0 0 9px rgba(142, 182, 155, 0.4),
+    0 18px 36px rgba(5, 31, 32, 0.12);
+  transition: transform 0.4s var(--spring-ease), box-shadow 0.4s ease;
+}
+
+.vignette-frame:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 0 2.5px var(--brand-emerald),
+    0 0 0 7px var(--bg-page),
+    0 0 0 11px rgba(142, 182, 155, 0.55),
+    0 25px 45px rgba(5, 31, 32, 0.2);
+}
+
+.vignette-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Classical Price List */
+.menu-category-badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--brand-forest);
+  margin-bottom: 22px;
+  border-bottom: 2px solid var(--brand-forest);
+  padding-bottom: 4px;
+}
+
+[data-theme="dark"] .menu-category-badge {
+  color: #8EB69B;
+  border-bottom-color: #8EB69B;
+}
+
+.menu-price-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.price-item-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed var(--border-color);
+  transition: transform 0.2s ease;
+}
+
+.price-item-row:hover {
+  transform: translateX(4px);
+}
+
+.price-item-row:last-child {
+  border-bottom: none;
+}
+
+.price-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.price-item-name {
+  font-family: var(--font-sans);
+  font-size: 16.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.price-item-val {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--brand-forest);
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .price-item-val {
+  color: #8EB69B;
+}
+
+.price-item-desc {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Order Now Callout & 3 Packaging Cards
+   ========================================================================== */
+.order-callout-section {
+  padding: 95px 0;
+  background: var(--bg-page-gradient);
+  text-align: center;
+  transition: var(--theme-transition);
+}
+
+.stacked-order-wrap {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 50px auto;
+}
+
+.stacked-order-title {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 7vw, 86px);
+  font-weight: 900;
+  line-height: 0.88;
+  color: var(--brand-pine);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin: 0;
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .stacked-order-title {
+  color: #DAF1DE;
+}
+
+.order-pedestal-cake {
+  position: absolute;
+  top: 48%;
+  right: -20px;
+  transform: translateY(-50%) rotate(6deg);
+  width: clamp(90px, 14vw, 150px);
+  filter: drop-shadow(0 15px 25px rgba(5, 31, 32, 0.4));
+  animation: floatMini 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* 3 Rounded Deep Forest Packaging Cards */
+.packaging-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.packaging-card {
+  background: var(--banner-gradient-subtle);
+  color: #DAF1DE;
+  border-radius: var(--radius-card);
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgba(142, 182, 155, 0.25);
+  box-shadow: 0 16px 36px rgba(5, 31, 32, 0.22);
+  transition: transform 0.3s var(--spring-ease), box-shadow 0.3s ease;
+}
+
+.packaging-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(5, 31, 32, 0.32);
+}
+
+.packaging-card-visual {
+  width: 110px;
+  height: 110px;
+  border-radius: 16px;
+  background: rgba(218, 241, 222, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  border: 1px solid rgba(218, 241, 222, 0.25);
+}
+
+.packaging-card-visual svg {
+  width: 50px;
+  height: 50px;
+  stroke: #DAF1DE;
+}
+
+.packaging-card-title {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 700;
+  color: #DAF1DE;
+  margin-bottom: 8px;
+}
+
+.packaging-card-desc {
+  font-size: 14px;
+  color: rgba(218, 241, 222, 0.88);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.packaging-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 24px;
+  background-color: #DAF1DE;
+  color: #051F20 !important;
+  font-size: 13.5px;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.packaging-card-btn:hover {
+  background-color: #8EB69B;
+  color: #051F20 !important;
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Solid Forest Green Gradient Band: Our Specialties
+   ========================================================================== */
+.specialties-blue-section {
+  background: var(--banner-gradient);
+  color: #DAF1DE;
+  padding: 95px 0;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.specialties-header-title {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 800;
+  color: #DAF1DE;
+  margin-bottom: 12px;
+}
+
+.specialties-header-sub {
+  font-size: 16px;
+  color: rgba(218, 241, 222, 0.88);
+  max-width: 560px;
+  margin: 0 auto 55px auto;
+  line-height: 1.6;
+}
+
+.specialties-badges-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.specialties-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.specialties-row-2 {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.specialty-badge-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #DAF1DE;
+  cursor: pointer;
+  transition: transform 0.3s var(--spring-ease);
+}
+
+.specialty-badge-card:hover {
+  transform: translateY(-6px);
+}
+
+.specialty-badge-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid #8EB69B;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  margin-bottom: 14px;
+  background: var(--bg-surface);
+  transition: transform 0.3s ease;
+}
+
+.specialty-badge-card:hover .specialty-badge-circle {
+  transform: scale(1.08);
+}
+
+.specialty-badge-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.specialty-badge-name {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 700;
+  color: #DAF1DE;
+  margin-bottom: 4px;
+}
+
+.specialty-badge-price {
+  font-family: var(--font-display);
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #8EB69B;
+}
+
+/* ==========================================================================
+   Atmosphere & Review Bubble Section
+   ========================================================================== */
+.community-story-section {
+  padding: 95px 0;
+  background: var(--bg-page-gradient);
+  transition: var(--theme-transition);
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.community-quote-block {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--brand-pine);
+  margin-bottom: 24px;
+}
+
+[data-theme="dark"] .community-quote-block {
+  color: #DAF1DE;
+}
+
+.community-prose {
+  font-size: 15.5px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* Speech Bubble Review Card */
+.review-bubble-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 24px 28px;
+  position: relative;
+  margin-top: 30px;
+  box-shadow: 0 10px 25px rgba(5, 31, 32, 0.08);
+}
+
+.review-bubble-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 36px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  transform: rotate(45deg);
+}
+
+.review-stars {
+  color: #235347;
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+[data-theme="dark"] .review-stars {
+  color: #8EB69B;
+}
+
+.review-text {
+  font-style: italic;
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.review-author {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--brand-forest);
+}
+
+[data-theme="dark"] .review-author {
+  color: #8EB69B;
+}
+
+/* ==========================================================================
+   Comprehensive Responsive System (Mobile, Tablet, Desktop)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .cobalt-banner-grid,
+  .community-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .editorial-row,
+  .editorial-row.is-reversed {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .packaging-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-editorial-section {
+    padding-top: 105px;
+    padding-bottom: 50px;
+  }
+
+  .hero-stacked-title {
+    font-size: clamp(32px, 8.5vw, 56px);
+  }
+
+  .hero-floating-cutout {
+    width: clamp(150px, 32vw, 220px);
+  }
+
+  .editorial-row,
+  .editorial-row.is-reversed {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .editorial-row.is-reversed .editorial-vignette-col {
+    order: 1;
+  }
+
+  .editorial-row.is-reversed .editorial-list-col {
+    order: 2;
+  }
+
+  .vignette-frame {
+    width: 200px;
+  }
+
+  .price-item-top {
+    justify-content: space-between;
+  }
+
+  .specialties-row-3 {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .specialties-row-2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .packaging-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cobalt-banner-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cobalt-collage-wrap {
+    min-height: 280px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .collage-card-main {
+    width: 220px;
+    height: 270px;
+  }
+
+  .collage-card-secondary {
+    width: 150px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-stacked-title {
+    font-size: clamp(26px, 8.8vw, 38px);
+    line-height: 0.95;
+  }
+
+  .hero-floating-cutout {
+    width: clamp(130px, 36vw, 170px);
+  }
+
+  .hero-pills-row {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .pill-action-btn,
+  .pill-action-btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-editorial-sub {
+    font-size: 14px;
+    padding: 0 12px;
+  }
+}
+
+/* ==========================================================================
+   WhatsApp Chat Integration (Floating Luxury Pill & Contextual Actions)
+   ========================================================================== */
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 998;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px 10px 12px;
+  background: var(--brand-deep);
+  color: var(--brand-mint) !important;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  box-shadow: 0 12px 32px rgba(5, 31, 32, 0.28), 0 2px 8px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.25s var(--spring-ease), box-shadow 0.25s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.floating-whatsapp-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  background: var(--brand-pine);
+  border-color: var(--brand-sage);
+  box-shadow: 0 18px 40px rgba(5, 31, 32, 0.38), 0 0 20px rgba(142, 182, 155, 0.3);
+  color: var(--brand-mint) !important;
+}
+
+.floating-whatsapp-btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.whatsapp-icon-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #051F20;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.35);
+}
+
+.whatsapp-icon-circle svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.whatsapp-pulse-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #25D366;
+  border: 1.5px solid var(--brand-deep);
+  box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  animation: waPulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes waPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-btn-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.whatsapp-btn-primary {
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--brand-mint);
+}
+
+.whatsapp-btn-sub {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--brand-sage);
+}
+
+/* Contextual Visit & Reservation WhatsApp Action */
+.visit-whatsapp-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px 18px;
+  border-radius: var(--radius-full);
+  background: var(--brand-forest);
+  color: var(--brand-mint) !important;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s var(--spring-ease), background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.visit-whatsapp-action:hover {
+  transform: translateY(-2px);
+  background: var(--brand-emerald);
+  box-shadow: 0 6px 18px rgba(5, 31, 32, 0.2);
+}
+
+.visit-whatsapp-action .whatsapp-icon-circle {
+  width: 24px;
+  height: 24px;
+}
+
+.visit-whatsapp-action .whatsapp-icon-circle svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 600px) {
+  .floating-whatsapp-btn {
+    bottom: 20px;
+    right: 18px;
+    padding: 8px 16px 8px 10px;
+    gap: 8px;
+  }
+  .whatsapp-btn-primary {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .whatsapp-btn-sub {
+    display: none;
+  }
+}
+

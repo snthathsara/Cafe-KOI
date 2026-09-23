@@ -1,0 +1,240 @@
+/* ==========================================================================
+   Spruce Cafe — Comprehensive Animation System
+   ========================================================================== */
+
+/* 1. Page Load & Hero Entrance Keyframes */
+@keyframes navEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroCardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heroFloatIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(-30px, 20px, 0) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes heroBadgeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(20px, -20px, 0) scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+/* 2. Living Micro-Animations (Gentle Breathing Float) */
+@keyframes gentleFloatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes gentleFloatReverse {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@keyframes subtlePulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08);
+  }
+}
+
+/* 3. Theme Toggle Button Flip Animation (Snappy 0.22s) */
+@keyframes iconSpinFlip {
+  0% {
+    transform: rotate(-120deg) scale(0.65);
+    opacity: 0.3;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.theme-icon-animate {
+  animation: iconSpinFlip 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 4. Scroll Reveal Utility Classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger Delays for Grid Items & Cards */
+.stagger-1 { transition-delay: 0.06s; }
+.stagger-2 { transition-delay: 0.12s; }
+.stagger-3 { transition-delay: 0.18s; }
+.stagger-4 { transition-delay: 0.24s; }
+.stagger-5 { transition-delay: 0.30s; }
+.stagger-6 { transition-delay: 0.36s; }
+.stagger-7 { transition-delay: 0.42s; }
+.stagger-8 { transition-delay: 0.48s; }
+
+/* Apply Entrance Animations to Hero Elements */
+.site-header {
+  animation: navEntrance 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both;
+}
+
+.hero-badge-pill {
+  animation: heroFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.hero-title {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+
+.hero-desc {
+  animation: heroFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+}
+
+.hero-actions-row {
+  animation: heroFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+}
+
+.hero-cafe-features {
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+}
+
+.hero-main-card {
+  animation: heroCardIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.hero-floating-card-bottom {
+  animation: heroFloatIn 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) 0.55s both,
+             gentleFloatSlow 5s ease-in-out 1.4s infinite;
+}
+
+.hero-floating-badge-top {
+  animation: heroBadgeIn 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) 0.65s both,
+             gentleFloatReverse 4.6s ease-in-out 1.5s infinite;
+}
+
+.hero-ambient-glow {
+  animation: subtlePulseGlow 6s ease-in-out infinite alternate;
+}
+
+/* 5. Interactive Button & Card Physics */
+.btn-hero-primary,
+.btn-reserve-submit,
+.nav-cta-btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.25s ease, 
+              background-color 0.2s ease;
+}
+
+.btn-hero-primary:active,
+.btn-reserve-submit:active,
+.nav-cta-btn:active {
+  transform: scale(0.96);
+}
+
+.btn-hero-primary svg,
+.btn-reserve-submit svg {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-hero-primary:hover svg,
+.btn-reserve-submit:hover svg {
+  transform: translateX(4px);
+}
+
+/* Interactive Card Hover Depth */
+.menu-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.25s ease, 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-item {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.25s ease, 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* Filter Buttons Transition */
+.filter-btn {
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.filter-btn:active {
+  transform: scale(0.95);
+}
+
+/* Chip buttons in reservations */
+.chip-btn {
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.chip-btn:active {
+  transform: scale(0.94);
+}

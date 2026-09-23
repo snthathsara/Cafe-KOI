@@ -1,0 +1,157 @@
+:root {
+  /* ==========================================================================
+     Café KOI — Botanical Sanctuary Palette (Forest Green & Pale Mint Cream)
+     Exact Swatches: #051F20 | #0B2B26 | #163832 | #235347 | #8EB69B | #DAF1DE
+     Zero blinding #FFFFFF — Velvet, eye-soothing mint cream & forest gradients
+     ========================================================================== */
+
+  /* Light Theme (Tranquil Organic Mint & Deep Emerald Pine) */
+  --bg-page: #DAF1DE;
+  --bg-page-gradient: linear-gradient(150deg, #E6F7EB 0%, #DAF1DE 45%, #CDE8D4 100%);
+  --bg-surface: #E8F6EC;
+  --bg-surface-subtle: #D6EFE0;
+  --bg-surface-card: #E1F2E6;
+  --bg-pill: #C7E5CE;
+  --bg-pill-hover: #B6DCBF;
+
+  --text-primary: #051F20;
+  --text-secondary: #163832;
+  --text-muted: #3D685E;
+
+  --border-color: #A8D1B6;
+  --border-subtle: #C2E2CC;
+  --border-dark: #051F20;
+
+  /* Brand Palette Tokens */
+  --brand-deep: #051F20;
+  --brand-pine: #0B2B26;
+  --brand-forest: #163832;
+  --brand-emerald: #235347;
+  --brand-sage: #8EB69B;
+  --brand-mint: #DAF1DE;
+
+  /* Aliased Core Tokens */
+  --brand-cobalt: #163832;
+  --brand-cobalt-hover: #0B2B26;
+  --brand-cobalt-light: #CDEBD4;
+  --brand-cobalt-rgb: 22, 56, 50;
+
+  --brand-purple: #235347;
+  --brand-purple-hover: #163832;
+  --brand-purple-light: #DAF1DE;
+  --brand-purple-rgb: 35, 83, 71;
+
+  --accent-green: #235347;
+  --accent-green-soft: #8EB69B;
+  --accent-lamp: #0B2B26;
+  --accent-lamp-glow: rgba(35, 83, 71, 0.22);
+
+  --btn-primary-bg: #163832;
+  --btn-primary-text: #DAF1DE;
+  --btn-secondary-bg: transparent;
+  --btn-secondary-text: #163832;
+  --btn-secondary-border: #163832;
+
+  /* Atmospheric Gradients */
+  --banner-gradient: linear-gradient(135deg, #051F20 0%, #0B2B26 40%, #163832 75%, #235347 100%);
+  --banner-gradient-subtle: linear-gradient(145deg, #0B2B26 0%, #163832 55%, #235347 100%);
+  --ambient-beam: radial-gradient(ellipse at 15% 10%, rgba(142, 182, 155, 0.45) 0%, transparent 60%);
+
+  /* Floating Navbar Tokens — Light Mode */
+  --nav-bar-bg: rgba(218, 241, 222, 0.94);
+  --nav-border: rgba(22, 56, 50, 0.16);
+  --nav-brand-color: #051F20;
+  --nav-btn-color: #163832;
+  --nav-btn-hover: #051F20;
+  --nav-btn-active-bg: #163832;
+  --nav-btn-active-text: #DAF1DE;
+  --nav-divider-color: rgba(22, 56, 50, 0.16);
+  --nav-control-bg: rgba(22, 56, 50, 0.08);
+  --nav-control-hover: rgba(22, 56, 50, 0.15);
+  --nav-shadow: 0 10px 30px rgba(5, 31, 32, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  /* Typography Stacks */
+  --font-display: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-mono: 'JetBrains Mono', SFMono-Regular, monospace;
+
+  /* Typography Scales */
+  --fs-display: clamp(48px, 8.5vw, 110px);
+  --fs-h2: clamp(32px, 4.5vw, 54px);
+  --fs-h3: clamp(22px, 2.5vw, 30px);
+  --fs-card-title: clamp(18px, 1.8vw, 22px);
+  --fs-body: 16px;
+  --fs-body-sm: 14px;
+  --fs-mono: 12px;
+
+  /* Layout Constants */
+  --container-max-width: 1200px;
+  --container-padding: 32px;
+  --section-spacing-y: clamp(64px, 8vw, 96px);
+  --radius-full: 9999px;
+  --radius-card: 20px;
+  --radius-sm: 12px;
+
+  --spring-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ==========================================================================
+   Dark Theme (Midnight Obsidian Forest & Glowing Celadon Aurora)
+   ========================================================================== */
+[data-theme="dark"] {
+  --bg-page: #051F20;
+  --bg-page-gradient: linear-gradient(150deg, #082526 0%, #051F20 50%, #031516 100%);
+  --bg-surface: #0B2B26;
+  --bg-surface-subtle: #11352F;
+  --bg-surface-card: #0E302A;
+  --bg-pill: #163832;
+  --bg-pill-hover: #1D4840;
+
+  --text-primary: #DAF1DE;
+  --text-secondary: #8EB69B;
+  --text-muted: #688E75;
+
+  --border-color: #1B443C;
+  --border-subtle: #133830;
+  --border-dark: #DAF1DE;
+
+  --brand-cobalt: #8EB69B;
+  --brand-cobalt-hover: #DAF1DE;
+  --brand-cobalt-light: #163832;
+  --brand-cobalt-rgb: 142, 182, 155;
+
+  --brand-purple: #DAF1DE;
+  --brand-purple-hover: #DAF1DE;
+  --brand-purple-light: #163832;
+  --brand-purple-rgb: 218, 241, 222;
+
+  --accent-green: #8EB69B;
+  --accent-green-soft: #DAF1DE;
+  --accent-lamp: #DAF1DE;
+  --accent-lamp-glow: rgba(218, 241, 222, 0.25);
+
+  --btn-primary-bg: #8EB69B;
+  --btn-primary-text: #051F20;
+  --btn-secondary-bg: transparent;
+  --btn-secondary-text: #DAF1DE;
+  --btn-secondary-border: #8EB69B;
+
+  --banner-gradient: linear-gradient(135deg, #031415 0%, #051F20 45%, #0B2B26 80%, #163832 100%);
+  --banner-gradient-subtle: linear-gradient(145deg, #051F20 0%, #0B2B26 50%, #163832 100%);
+  --ambient-beam: radial-gradient(ellipse at 15% 10%, rgba(142, 182, 155, 0.2) 0%, transparent 60%);
+
+  /* Floating Navbar Tokens — Dark Mode */
+  --nav-bar-bg: rgba(11, 43, 38, 0.94);
+  --nav-border: rgba(142, 182, 155, 0.22);
+  --nav-brand-color: #DAF1DE;
+  --nav-btn-color: #8EB69B;
+  --nav-btn-hover: #DAF1DE;
+  --nav-btn-active-bg: #8EB69B;
+  --nav-btn-active-text: #051F20;
+  --nav-divider-color: rgba(142, 182, 155, 0.18);
+  --nav-control-bg: rgba(142, 182, 155, 0.1);
+  --nav-control-hover: rgba(142, 182, 155, 0.2);
+  --nav-shadow: 0 10px 32px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(142, 182, 155, 0.15);
+}
