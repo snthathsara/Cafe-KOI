@@ -12,8 +12,8 @@ export function initScrollAnimations() {
 
   const observerOptions = {
     root: null,
-    rootMargin: '0px 0px -40px 0px',
-    threshold: 0.08
+    rootMargin: '0px 0px 150px 0px',
+    threshold: 0.02
   };
 
   const observer = new IntersectionObserver((entries, obs) => {
@@ -26,4 +26,29 @@ export function initScrollAnimations() {
   }, observerOptions);
 
   revealElements.forEach(el => observer.observe(el));
+
+  // If user navigates via anchor hash (e.g. #reservations), reveal immediately
+  function checkHashReveal() {
+    if (window.location.hash) {
+      try {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+          target.querySelectorAll('.reveal-on-scroll').forEach(el => el.classList.add('is-visible'));
+        }
+      } catch (e) {}
+    }
+  }
+
+  checkHashReveal();
+  window.addEventListener('hashchange', checkHashReveal);
+
+  // Safety fallback for headless capture or fast jumps
+  setTimeout(() => {
+    revealElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 300) {
+        el.classList.add('is-visible');
+      }
+    });
+  }, 400);
 }

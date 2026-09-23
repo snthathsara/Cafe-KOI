@@ -1,4 +1,7 @@
-/* Reservations and Visit Section */
+/* ==========================================================================
+   Reservations and Visit Section — Direct Instant Channels (No Database)
+   ========================================================================== */
+
 .reservation-section {
   padding-top: var(--section-spacing-y);
   padding-bottom: var(--section-spacing-y);
@@ -12,120 +15,289 @@
 .reservation-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 48px;
+  gap: 44px;
   align-items: start;
   margin-top: 36px;
 }
 
-/* Reservation Form Card */
-.reservation-card {
+/* ==========================================================================
+   Direct Booking & Inquiry Card
+   ========================================================================== */
+.reservation-direct-card {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-card);
-  padding: 36px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+  padding: 36px 32px;
+  box-shadow: 0 16px 40px rgba(20, 8, 30, 0.08);
   transition: var(--theme-transition);
 }
 
-.form-group-title {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 12px;
-}
-
-/* Guest Selector Chips */
-.guest-chips-row {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 24px;
-}
-
-.chip-btn {
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  font-size: 13.5px;
-  font-weight: 500;
-  border: 1px solid var(--border-color);
-  background: var(--bg-surface);
-  color: var(--text-secondary);
-  transition: all 0.2s ease;
-}
-
-.chip-btn:hover {
-  border-color: var(--text-primary);
-  color: var(--text-primary);
-}
-
-.chip-btn.is-selected {
-  background: var(--btn-primary-bg);
-  color: var(--btn-primary-text);
-  border-color: var(--btn-primary-bg);
-  font-weight: 600;
-}
-
-/* Form Rows */
-.form-row-dual {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-
-.form-field {
+.direct-booking-header {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 12px;
 }
 
-.form-label {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.form-input, .form-select, .form-textarea {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-color);
-  background: var(--bg-page);
-  color: var(--text-primary);
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.form-input:focus, .form-select:focus, .form-textarea:focus {
-  border-color: var(--accent-green);
-  box-shadow: 0 0 0 3px rgba(63, 92, 75, 0.15);
-}
-
-/* Submit Button */
-.btn-reserve-submit {
-  width: 100%;
-  padding: 15px;
+.direct-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brand-purple);
+  background: rgba(104, 44, 150, 0.12);
+  padding: 5px 14px;
   border-radius: var(--radius-full);
-  background: var(--btn-primary-bg);
-  color: var(--btn-primary-text);
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  width: fit-content;
+}
+
+.direct-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #25D366;
+  box-shadow: 0 0 8px rgba(37, 211, 102, 0.8);
+  animation: pulseDot 2s infinite;
+}
+
+.direct-booking-title {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.direct-booking-desc {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Channels Stack */
+.direct-channels-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.direct-channel-btn {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface-card);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.direct-channel-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(20, 8, 30, 0.12);
+  border-color: var(--brand-purple);
+}
+
+.direct-channel-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s var(--spring-ease);
+}
+
+.direct-channel-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.direct-channel-btn:hover .direct-channel-icon {
+  transform: scale(1.1) rotate(-4deg);
+}
+
+/* Specific Channel Accents */
+.direct-channel-btn.is-whatsapp {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.08) 0%, var(--bg-surface-card) 65%);
+  border-color: rgba(37, 211, 102, 0.32);
+}
+
+.direct-channel-btn.is-whatsapp:hover {
+  border-color: #25D366;
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.16) 0%, var(--bg-surface-card) 65%);
+}
+
+.direct-channel-btn.is-whatsapp .direct-channel-icon {
+  background: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+}
+
+.direct-channel-btn.is-whatsapp .direct-channel-icon svg {
+  fill: #FFFFFF;
+}
+
+.direct-channel-btn.is-instagram {
+  background: linear-gradient(135deg, rgba(225, 48, 108, 0.06) 0%, var(--bg-surface-card) 65%);
+  border-color: rgba(225, 48, 108, 0.25);
+}
+
+.direct-channel-btn.is-instagram:hover {
+  border-color: #E1306C;
+  background: linear-gradient(135deg, rgba(225, 48, 108, 0.14) 0%, var(--bg-surface-card) 65%);
+}
+
+.direct-channel-btn.is-instagram .direct-channel-icon {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(225, 48, 108, 0.3);
+}
+
+.direct-channel-btn.is-cakes {
+  background: linear-gradient(135deg, rgba(104, 44, 150, 0.08) 0%, var(--bg-surface-card) 65%);
+  border-color: rgba(104, 44, 150, 0.28);
+}
+
+.direct-channel-btn.is-cakes:hover {
+  border-color: var(--brand-purple);
+  background: linear-gradient(135deg, rgba(104, 44, 150, 0.16) 0%, var(--bg-surface-card) 65%);
+}
+
+.direct-channel-btn.is-cakes .direct-channel-icon {
+  background: var(--brand-forest);
+  color: #F4EEFA;
+  box-shadow: 0 6px 16px rgba(65, 27, 94, 0.35);
+}
+
+.direct-channel-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.direct-channel-top {
+  display: flex;
+  align-items: center;
   gap: 8px;
-  margin-top: 10px;
-  transition: transform 0.2s var(--spring-ease), background 0.2s ease;
+  flex-wrap: wrap;
 }
 
-.btn-reserve-submit:hover {
-  transform: translateY(-2px);
-  background: var(--accent-green-soft);
+.direct-channel-name {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
-/* Visit & Hours Card */
+.direct-channel-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: var(--bg-pill);
+  color: var(--text-secondary);
+}
+
+.direct-channel-hint {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.direct-channel-arrow {
+  color: var(--text-muted);
+  transition: transform 0.25s ease, color 0.25s ease;
+  display: flex;
+  align-items: center;
+}
+
+.direct-channel-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.direct-channel-btn:hover .direct-channel-arrow {
+  transform: translateX(4px);
+  color: var(--text-primary);
+}
+
+/* Direct Footer Row */
+.direct-footer-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.direct-phone-call {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 13.5px;
+}
+
+.phone-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.phone-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phone-link {
+  color: var(--brand-purple);
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.phone-link:hover {
+  color: var(--brand-forest);
+}
+
+.phone-sep {
+  color: var(--border-color);
+}
+
+.direct-assurances {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.assurance-pill {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+}
+
+/* ==========================================================================
+   Visit & Hours Column (Right)
+   ========================================================================== */
 .visit-info-column {
   display: flex;
   flex-direction: column;
@@ -137,6 +309,7 @@
   border: 1px solid var(--border-color);
   border-radius: var(--radius-card);
   padding: 26px;
+  box-shadow: 0 10px 28px rgba(20, 8, 30, 0.05);
   transition: var(--theme-transition);
 }
 
@@ -212,7 +385,7 @@
 .map-pin-icon {
   width: 28px;
   height: 28px;
-  color: var(--accent-lamp);
+  color: var(--brand-sage);
   margin-bottom: 4px;
 }
 
@@ -226,53 +399,35 @@
   color: var(--brand-sage);
 }
 
-/* Confirmation Success State */
-.reservation-success-box {
-  display: none;
-  text-align: center;
-  padding: 36px 16px;
-}
-
-.reservation-success-box.is-visible {
-  display: block;
-}
-
-.success-icon-wrap {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: rgba(104, 44, 150, 0.18);
-  color: var(--accent-green);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.success-title {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 6px;
-}
-
-.success-code {
-  font-size: 14px;
-  color: var(--accent-lamp);
-  font-weight: 600;
-  margin-bottom: 14px;
-}
-
-.success-desc {
-  font-size: 14.5px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  max-width: 440px;
-  margin: 0 auto 20px;
-}
-
+/* Responsive Media Queries */
 @media (max-width: 960px) {
   .reservation-grid {
     grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .reservation-direct-card {
+    padding: 24px 20px;
+  }
+
+  .direct-channel-btn {
+    padding: 16px 16px;
+    gap: 14px;
+  }
+
+  .direct-channel-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
+
+  .direct-channel-name {
+    font-size: 15px;
+  }
+
+  .direct-channel-hint {
+    font-size: 12.5px;
   }
 }
