@@ -1,7 +1,7 @@
 /* ==========================================================================
-   Café KOI — Botanical Sanctuary Palette (Forest Green & Pale Mint Cream)
-   Exact Swatches: #051F20 | #0B2B26 | #163832 | #235347 | #8EB69B | #DAF1DE
-   Zero harsh #FFFFFF — Eye-soothing velvet mint & deep forest gradients
+   Café KOI — Luxury Velvet Blueberry & Lavender Plum Palette
+   Exact Swatches: #14081E | #261038 | #411B5E | #682C96 | #B69BD1 | #F4EEFA
+   Zero harsh #FFFFFF — Eye-soothing velvet lavender cream & royal plum gradients
    ========================================================================== */
 
 /* Stacked Display Typography Header */
@@ -92,10 +92,10 @@
   transition: color 0.25s ease, text-shadow 0.25s ease;
 }
 
-/* Dark Mode: Luminous Pale Mint glow */
+/* Dark Mode: Luminous Pale Lavender glow */
 [data-theme="dark"] .hero-stacked-title {
-  color: #DAF1DE;
-  text-shadow: 0 0 50px rgba(142, 182, 155, 0.45);
+  color: #F4EEFA;
+  text-shadow: 0 0 50px rgba(182, 155, 209, 0.45);
 }
 
 .hero-stacked-line {
@@ -173,20 +173,20 @@
   gap: 8px;
   padding: 12px 28px;
   background-color: var(--brand-forest);
-  color: #DAF1DE !important;
+  color: #F4EEFA !important;
   font-family: var(--font-sans);
   font-size: 14.5px;
   font-weight: 600;
   border-radius: var(--radius-full);
   text-decoration: none;
   transition: transform 0.2s var(--spring-ease), background-color 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 16px rgba(5, 31, 32, 0.25);
+  box-shadow: 0 4px 16px rgba(20, 8, 30, 0.25);
 }
 
 .pill-action-btn:hover {
   background-color: var(--brand-pine);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(5, 31, 32, 0.35);
+  box-shadow: 0 8px 24px rgba(20, 8, 30, 0.35);
 }
 
 .pill-action-btn-outline {
@@ -206,12 +206,12 @@
 }
 
 [data-theme="dark"] .pill-action-btn-outline {
-  color: #DAF1DE !important;
-  border-color: #8EB69B;
+  color: #F4EEFA !important;
+  border-color: #B69BD1;
 }
 
 .pill-action-btn-outline:hover {
-  background-color: rgba(35, 83, 71, 0.12);
+  background-color: rgba(104, 44, 150, 0.12);
   transform: translateY(-2px);
 }
 
@@ -220,7 +220,7 @@
    ========================================================================== */
 .cobalt-banner-section {
   background: var(--banner-gradient);
-  color: #DAF1DE;
+  color: #F4EEFA;
   padding: 90px 0;
   position: relative;
   overflow: hidden;
@@ -239,7 +239,7 @@
   font-size: clamp(26px, 3.8vw, 42px);
   font-weight: 700;
   line-height: 1.18;
-  color: #DAF1DE;
+  color: #F4EEFA;
   margin-bottom: 24px;
 }
 
@@ -247,7 +247,7 @@
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.7;
-  color: rgba(218, 241, 222, 0.9);
+  color: rgba(244, 238, 250, 0.9);
   margin-bottom: 30px;
 }
 
@@ -262,16 +262,16 @@
   align-items: center;
   gap: 6px;
   padding: 6px 16px;
-  background: rgba(142, 182, 155, 0.18);
-  border: 1px solid rgba(218, 241, 222, 0.35);
-  color: #DAF1DE;
+  background: rgba(182, 155, 209, 0.18);
+  border: 1px solid rgba(244, 238, 250, 0.35);
+  color: #F4EEFA;
   font-size: 13px;
   font-weight: 500;
   border-radius: var(--radius-full);
   backdrop-filter: blur(8px);
 }
 
-/* Asymmetrical Collage with Soft Sage / Celadon Borders */
+/* Asymmetrical Collage with Soft Wisteria / Lilac Borders */
 .cobalt-collage-wrap {
   position: relative;
   display: flex;
@@ -286,7 +286,7 @@
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
-  border: 4px solid #8EB69B;
+  border: 4px solid #B69BD1;
   transform: rotate(-3deg);
   transition: transform 0.3s ease;
 }
@@ -306,7 +306,7 @@
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-  border: 4px solid #8EB69B;
+  border: 4px solid #B69BD1;
   transform: rotate(5deg);
   transition: transform 0.3s ease;
 }
@@ -356,7 +356,7 @@
 }
 
 [data-theme="dark"] .editorial-menu-title {
-  color: #DAF1DE;
+  color: #F4EEFA;
 }
 
 .editorial-menu-sub {
@@ -395,7 +395,7 @@
   order: 1;
 }
 
-/* Circular Vignette with Etched Forest & Sage Rings */
+/* Circular Vignette with Etched Purple & Wisteria Rings */
 .editorial-vignette-col {
   display: flex;
   justify-content: center;
@@ -412,8 +412,8 @@
   box-shadow: 
     0 0 0 2px var(--brand-emerald),
     0 0 0 6px var(--bg-page),
-    0 0 0 9px rgba(142, 182, 155, 0.4),
-    0 18px 36px rgba(5, 31, 32, 0.12);
+    0 0 0 9px rgba(182, 155, 209, 0.4),
+    0 18px 36px rgba(20, 8, 30, 0.12);
   transition: transform 0.4s var(--spring-ease), box-shadow 0.4s ease;
 }
 
@@ -422,8 +422,8 @@
   box-shadow: 
     0 0 0 2.5px var(--brand-emerald),
     0 0 0 7px var(--bg-page),
-    0 0 0 11px rgba(142, 182, 155, 0.55),
-    0 25px 45px rgba(5, 31, 32, 0.2);
+    0 0 0 11px rgba(182, 155, 209, 0.55),
+    0 25px 45px rgba(20, 8, 30, 0.2);
 }
 
 .vignette-img {
@@ -447,8 +447,8 @@
 }
 
 [data-theme="dark"] .menu-category-badge {
-  color: #8EB69B;
-  border-bottom-color: #8EB69B;
+  color: #B69BD1;
+  border-bottom-color: #B69BD1;
 }
 
 .menu-price-items-list {
@@ -535,7 +535,7 @@
 }
 
 [data-theme="dark"] .stacked-order-title {
-  color: #DAF1DE;
+  color: #F4EEFA;
 }
 
 .order-pedestal-cake {
@@ -544,7 +544,7 @@
   right: -20px;
   transform: translateY(-50%) rotate(6deg);
   width: clamp(90px, 14vw, 150px);
-  filter: drop-shadow(0 15px 25px rgba(5, 31, 32, 0.4));
+  filter: drop-shadow(0 15px 25px rgba(20, 8, 30, 0.4));
   animation: floatMini 5s ease-in-out infinite;
   pointer-events: none;
 }
@@ -560,52 +560,52 @@
 
 .packaging-card {
   background: var(--banner-gradient-subtle);
-  color: #DAF1DE;
+  color: #F4EEFA;
   border-radius: var(--radius-card);
   padding: 36px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 1px solid rgba(142, 182, 155, 0.25);
-  box-shadow: 0 16px 36px rgba(5, 31, 32, 0.22);
+  border: 1px solid rgba(182, 155, 209, 0.25);
+  box-shadow: 0 16px 36px rgba(20, 8, 30, 0.22);
   transition: transform 0.3s var(--spring-ease), box-shadow 0.3s ease;
 }
 
 .packaging-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 48px rgba(5, 31, 32, 0.32);
+  box-shadow: 0 24px 48px rgba(20, 8, 30, 0.32);
 }
 
 .packaging-card-visual {
   width: 110px;
   height: 110px;
   border-radius: 16px;
-  background: rgba(218, 241, 222, 0.12);
+  background: rgba(244, 238, 250, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 22px;
-  border: 1px solid rgba(218, 241, 222, 0.25);
+  border: 1px solid rgba(244, 238, 250, 0.25);
 }
 
 .packaging-card-visual svg {
   width: 50px;
   height: 50px;
-  stroke: #DAF1DE;
+  stroke: #F4EEFA;
 }
 
 .packaging-card-title {
   font-family: var(--font-display);
   font-size: 21px;
   font-weight: 700;
-  color: #DAF1DE;
+  color: #F4EEFA;
   margin-bottom: 8px;
 }
 
 .packaging-card-desc {
   font-size: 14px;
-  color: rgba(218, 241, 222, 0.88);
+  color: rgba(244, 238, 250, 0.88);
   line-height: 1.5;
   margin-bottom: 24px;
   flex-grow: 1;
@@ -616,8 +616,8 @@
   align-items: center;
   gap: 6px;
   padding: 9px 24px;
-  background-color: #DAF1DE;
-  color: #051F20 !important;
+  background-color: #F4EEFA;
+  color: #14081E !important;
   font-size: 13.5px;
   font-weight: 700;
   border-radius: var(--radius-full);
@@ -626,17 +626,17 @@
 }
 
 .packaging-card-btn:hover {
-  background-color: #8EB69B;
-  color: #051F20 !important;
+  background-color: #B69BD1;
+  color: #14081E !important;
   transform: scale(1.05);
 }
 
 /* ==========================================================================
-   Solid Forest Green Gradient Band: Our Specialties
+   Solid Velvet Plum Gradient Band: Our Specialties
    ========================================================================== */
 .specialties-blue-section {
   background: var(--banner-gradient);
-  color: #DAF1DE;
+  color: #F4EEFA;
   padding: 95px 0;
   text-align: center;
   transition: background 0.3s ease;
@@ -646,13 +646,13 @@
   font-family: var(--font-display);
   font-size: clamp(34px, 5vw, 52px);
   font-weight: 800;
-  color: #DAF1DE;
+  color: #F4EEFA;
   margin-bottom: 12px;
 }
 
 .specialties-header-sub {
   font-size: 16px;
-  color: rgba(218, 241, 222, 0.88);
+  color: rgba(244, 238, 250, 0.88);
   max-width: 560px;
   margin: 0 auto 55px auto;
   line-height: 1.6;
@@ -683,7 +683,7 @@
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #DAF1DE;
+  color: #F4EEFA;
   cursor: pointer;
   transition: transform 0.3s var(--spring-ease);
 }
@@ -696,7 +696,7 @@
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 4px solid #8EB69B;
+  border: 4px solid #B69BD1;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
   overflow: hidden;
   margin-bottom: 14px;
@@ -719,7 +719,7 @@
   font-family: var(--font-sans);
   font-size: 15px;
   font-weight: 700;
-  color: #DAF1DE;
+  color: #F4EEFA;
   margin-bottom: 4px;
 }
 
@@ -727,7 +727,7 @@
   font-family: var(--font-display);
   font-size: 14.5px;
   font-weight: 600;
-  color: #8EB69B;
+  color: #B69BD1;
 }
 
 /* ==========================================================================
@@ -758,7 +758,7 @@
 }
 
 [data-theme="dark"] .community-quote-block {
-  color: #DAF1DE;
+  color: #F4EEFA;
 }
 
 .community-prose {
@@ -776,7 +776,7 @@
   padding: 24px 28px;
   position: relative;
   margin-top: 30px;
-  box-shadow: 0 10px 25px rgba(5, 31, 32, 0.08);
+  box-shadow: 0 10px 25px rgba(20, 8, 30, 0.08);
 }
 
 .review-bubble-card::before {
@@ -793,7 +793,7 @@
 }
 
 .review-stars {
-  color: #235347;
+  color: #682C96;
   display: flex;
   gap: 4px;
   margin-bottom: 10px;
@@ -801,7 +801,7 @@
 }
 
 [data-theme="dark"] .review-stars {
-  color: #8EB69B;
+  color: #B69BD1;
 }
 
 .review-text {
@@ -819,7 +819,7 @@
 }
 
 [data-theme="dark"] .review-author {
-  color: #8EB69B;
+  color: #B69BD1;
 }
 
 /* ==========================================================================
@@ -992,7 +992,7 @@
   height: 32px;
   border-radius: 50%;
   background: #25D366;
-  color: #051F20;
+  color: #14081E;
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(37, 211, 102, 0.35);
 }
@@ -1070,7 +1070,7 @@
 .visit-whatsapp-action:hover {
   transform: translateY(-2px);
   background: var(--brand-emerald);
-  box-shadow: 0 6px 18px rgba(5, 31, 32, 0.2);
+  box-shadow: 0 6px 18px rgba(20, 8, 30, 0.2);
 }
 
 .visit-whatsapp-action .whatsapp-icon-circle {

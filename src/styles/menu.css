@@ -109,7 +109,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(218, 241, 222, 0.28) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(244, 238, 250, 0.28) 0%, transparent 60%);
   opacity: 0;
   transition: opacity 0.35s ease;
   pointer-events: none;
@@ -266,7 +266,7 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(5, 31, 32, 0.75);
+  background: rgba(20, 8, 30, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 2000;

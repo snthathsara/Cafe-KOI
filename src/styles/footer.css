@@ -1,4 +1,4 @@
-/* Editorial Forest Luxury Footer */
+/* Editorial Velvet Plum Luxury Footer */
 .site-footer {
   padding-top: 70px;
   padding-bottom: 45px;
@@ -43,7 +43,7 @@
 .footer-tagline {
   font-size: 14.5px;
   line-height: 1.6;
-  color: rgba(218, 241, 222, 0.82);
+  color: rgba(244, 238, 250, 0.85);
   max-width: 320px;
 }
 
@@ -64,7 +64,7 @@
 
 .footer-link {
   font-size: 14px;
-  color: rgba(218, 241, 222, 0.8);
+  color: rgba(244, 238, 250, 0.8);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -90,8 +90,8 @@
   flex: 1;
   padding: 10px 16px;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(218, 241, 222, 0.25);
-  background: rgba(218, 241, 222, 0.08);
+  border: 1px solid rgba(244, 238, 250, 0.25);
+  background: rgba(244, 238, 250, 0.08);
   color: var(--brand-mint);
   font-size: 13.5px;
   outline: none;
@@ -99,19 +99,19 @@
 }
 
 .newsletter-input::placeholder {
-  color: rgba(218, 241, 222, 0.5);
+  color: rgba(244, 238, 250, 0.5);
 }
 
 .newsletter-input:focus {
   border-color: var(--brand-sage);
-  background: rgba(218, 241, 222, 0.15);
+  background: rgba(244, 238, 250, 0.15);
 }
 
 .newsletter-btn {
   padding: 10px 20px;
   border-radius: var(--radius-full);
   background: var(--brand-mint);
-  color: #051F20;
+  color: #14081E;
   font-size: 13.5px;
   font-weight: 700;
   transition: all 0.2s ease;
@@ -137,9 +137,9 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 32px;
-  border-top: 1px solid rgba(218, 241, 222, 0.18);
+  border-top: 1px solid rgba(244, 238, 250, 0.18);
   font-size: 13px;
-  color: rgba(218, 241, 222, 0.75);
+  color: rgba(244, 238, 250, 0.75);
   flex-wrap: wrap;
   gap: 16px;
 }
@@ -160,14 +160,14 @@
   color: var(--brand-mint);
   padding: 8px 16px;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(218, 241, 222, 0.3);
-  background: rgba(218, 241, 222, 0.1);
+  border: 1px solid rgba(244, 238, 250, 0.3);
+  background: rgba(244, 238, 250, 0.1);
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .back-to-top-btn:hover {
-  background: rgba(218, 241, 222, 0.22);
+  background: rgba(244, 238, 250, 0.22);
   border-color: var(--brand-mint);
   transform: translateY(-2px);
 }

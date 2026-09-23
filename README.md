@@ -8,10 +8,10 @@ Built with an organic botanical design language, tranquil atmosphere, fluid phys
 
 ## ✨ Design & Architectural Highlights
 
-- **Botanical Sanctuary Aesthetic (Zero Blinding White)**:
-  - Specially calibrated 6-color organic palette: Obsidian Forest (`#051F20`), Dark Emerald Pine (`#0B2B26`), Rich Forest Green (`#163832`), Classic Eucalyptus (`#235347`), Soft Celadon Sage (`#8EB69B`), and Pale Soft Mint Cream (`#DAF1DE`).
-  - Eye-friendly mint cream gradient surfaces preventing glare at 100% monitor brightness.
-  - Deep atmospheric forest gradients on feature banners and footers.
+- **Luxury Velvet Blueberry & Lavender Plum Palette (Zero Blinding White)**:
+  - Specially calibrated 6-color editorial palette: Obsidian Blackberry (`#14081E`), Deep Royal Aubergine (`#261038`), Rich Velvet Mulberry (`#411B5E`), Classic Amethyst Orchid (`#682C96`), Soft Muted Wisteria / Lilac Fog (`#B69BD1`), and Pale Velvet Lavender Cream (`#F4EEFA`).
+  - Eye-friendly lavender cream gradient surfaces preventing glare at 100% monitor brightness.
+  - Deep atmospheric velvet plum gradients on feature banners and footers.
 - **Editorial Typography & Visual Hierarchy**:
   - High-fashion editorial headlines powered by **Fraunces** with stacked repeating typography.
   - Transparent PNG blueberry cheesecake hero cutout with layered depth.

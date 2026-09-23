@@ -206,7 +206,7 @@
   justify-content: center;
   color: var(--brand-mint);
   text-align: center;
-  background: rgba(5, 31, 32, 0.45);
+  background: rgba(20, 8, 30, 0.5);
 }
 
 .map-pin-icon {
@@ -241,7 +241,7 @@
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background: rgba(35, 83, 71, 0.18);
+  background: rgba(104, 44, 150, 0.18);
   color: var(--accent-green);
   display: inline-flex;
   align-items: center;

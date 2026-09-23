@@ -1,74 +1,74 @@
 :root {
   /* ==========================================================================
-     Café KOI — Botanical Sanctuary Palette (Forest Green & Pale Mint Cream)
-     Exact Swatches: #051F20 | #0B2B26 | #163832 | #235347 | #8EB69B | #DAF1DE
-     Zero blinding #FFFFFF — Velvet, eye-soothing mint cream & forest gradients
+     Café KOI & KOI Cakes — Luxury Velvet Blueberry & Lavender Plum Palette
+     Exact Swatches: #14081E | #261038 | #411B5E | #682C96 | #B69BD1 | #F4EEFA
+     Zero blinding #FFFFFF — Eye-soothing velvet lavender milk & royal plum gradients
      ========================================================================== */
 
-  /* Light Theme (Tranquil Organic Mint & Deep Emerald Pine) */
-  --bg-page: #DAF1DE;
-  --bg-page-gradient: linear-gradient(150deg, #E6F7EB 0%, #DAF1DE 45%, #CDE8D4 100%);
-  --bg-surface: #E8F6EC;
-  --bg-surface-subtle: #D6EFE0;
-  --bg-surface-card: #E1F2E6;
-  --bg-pill: #C7E5CE;
-  --bg-pill-hover: #B6DCBF;
+  /* Light Theme (Velvet Lavender Cream & Deep Obsidian Plum) */
+  --bg-page: #F4EEFA;
+  --bg-page-gradient: linear-gradient(150deg, #FBF7FD 0%, #F4EEFA 45%, #EADBFA 100%);
+  --bg-surface: #FBF7FE;
+  --bg-surface-subtle: #EDE2F7;
+  --bg-surface-card: #F7F0FC;
+  --bg-pill: #E5D5F5;
+  --bg-pill-hover: #D8C2EE;
 
-  --text-primary: #051F20;
-  --text-secondary: #163832;
-  --text-muted: #3D685E;
+  --text-primary: #14081E;
+  --text-secondary: #411B5E;
+  --text-muted: #6F4F8E;
 
-  --border-color: #A8D1B6;
-  --border-subtle: #C2E2CC;
-  --border-dark: #051F20;
+  --border-color: #C8B1E3;
+  --border-subtle: #DECEF2;
+  --border-dark: #14081E;
 
   /* Brand Palette Tokens */
-  --brand-deep: #051F20;
-  --brand-pine: #0B2B26;
-  --brand-forest: #163832;
-  --brand-emerald: #235347;
-  --brand-sage: #8EB69B;
-  --brand-mint: #DAF1DE;
+  --brand-deep: #14081E;
+  --brand-pine: #261038;
+  --brand-forest: #411B5E;
+  --brand-emerald: #682C96;
+  --brand-sage: #B69BD1;
+  --brand-mint: #F4EEFA;
 
   /* Aliased Core Tokens */
-  --brand-cobalt: #163832;
-  --brand-cobalt-hover: #0B2B26;
-  --brand-cobalt-light: #CDEBD4;
-  --brand-cobalt-rgb: 22, 56, 50;
+  --brand-cobalt: #411B5E;
+  --brand-cobalt-hover: #261038;
+  --brand-cobalt-light: #EADBFA;
+  --brand-cobalt-rgb: 65, 27, 94;
 
-  --brand-purple: #235347;
-  --brand-purple-hover: #163832;
-  --brand-purple-light: #DAF1DE;
-  --brand-purple-rgb: 35, 83, 71;
+  --brand-purple: #682C96;
+  --brand-purple-hover: #411B5E;
+  --brand-purple-light: #F4EEFA;
+  --brand-purple-rgb: 104, 44, 150;
 
-  --accent-green: #235347;
-  --accent-green-soft: #8EB69B;
-  --accent-lamp: #0B2B26;
-  --accent-lamp-glow: rgba(35, 83, 71, 0.22);
+  --accent-green: #682C96;
+  --accent-green-soft: #B69BD1;
+  --accent-lamp: #261038;
+  --accent-lamp-glow: rgba(104, 44, 150, 0.22);
 
-  --btn-primary-bg: #163832;
-  --btn-primary-text: #DAF1DE;
+  --btn-primary-bg: #411B5E;
+  --btn-primary-text: #F4EEFA;
   --btn-secondary-bg: transparent;
-  --btn-secondary-text: #163832;
-  --btn-secondary-border: #163832;
+  --btn-secondary-text: #411B5E;
+  --btn-secondary-border: #411B5E;
 
   /* Atmospheric Gradients */
-  --banner-gradient: linear-gradient(135deg, #051F20 0%, #0B2B26 40%, #163832 75%, #235347 100%);
-  --banner-gradient-subtle: linear-gradient(145deg, #0B2B26 0%, #163832 55%, #235347 100%);
-  --ambient-beam: radial-gradient(ellipse at 15% 10%, rgba(142, 182, 155, 0.45) 0%, transparent 60%);
+  --banner-gradient: linear-gradient(135deg, #14081E 0%, #261038 40%, #411B5E 75%, #682C96 100%);
+  --banner-gradient-subtle: linear-gradient(145deg, #261038 0%, #411B5E 55%, #682C96 100%);
+  --ambient-beam: radial-gradient(ellipse at 15% 10%, rgba(182, 155, 209, 0.42) 0%, transparent 60%);
 
   /* Floating Navbar Tokens — Light Mode */
-  --nav-bar-bg: rgba(218, 241, 222, 0.94);
-  --nav-border: rgba(22, 56, 50, 0.16);
-  --nav-brand-color: #051F20;
-  --nav-btn-color: #163832;
-  --nav-btn-hover: #051F20;
-  --nav-btn-active-bg: #163832;
-  --nav-btn-active-text: #DAF1DE;
-  --nav-divider-color: rgba(22, 56, 50, 0.16);
-  --nav-control-bg: rgba(22, 56, 50, 0.08);
-  --nav-control-hover: rgba(22, 56, 50, 0.15);
-  --nav-shadow: 0 10px 30px rgba(5, 31, 32, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --nav-bar-bg: rgba(244, 238, 250, 0.94);
+  --nav-border: rgba(65, 27, 94, 0.16);
+  --nav-brand-color: #14081E;
+  --nav-btn-color: #411B5E;
+  --nav-btn-hover: #14081E;
+  --nav-btn-active-bg: #411B5E;
+  --nav-btn-active-text: #F4EEFA;
+  --nav-divider-color: rgba(65, 27, 94, 0.16);
+  --nav-control-bg: rgba(65, 27, 94, 0.08);
+  --nav-control-hover: rgba(65, 27, 94, 0.15);
+  --nav-shadow: 0 10px 30px rgba(20, 8, 30, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
 
   /* Typography Stacks */
   --font-display: 'Fraunces', 'Playfair Display', Georgia, serif;
@@ -97,61 +97,67 @@
   --theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+@media (max-width: 600px) {
+  :root {
+    --container-padding: 18px;
+  }
+}
+
 /* ==========================================================================
-   Dark Theme (Midnight Obsidian Forest & Glowing Celadon Aurora)
+   Dark Theme (Midnight Blackberry & Glowing Wisteria Aurora)
    ========================================================================== */
 [data-theme="dark"] {
-  --bg-page: #051F20;
-  --bg-page-gradient: linear-gradient(150deg, #082526 0%, #051F20 50%, #031516 100%);
-  --bg-surface: #0B2B26;
-  --bg-surface-subtle: #11352F;
-  --bg-surface-card: #0E302A;
-  --bg-pill: #163832;
-  --bg-pill-hover: #1D4840;
+  --bg-page: #0F0517;
+  --bg-page-gradient: linear-gradient(150deg, #170824 0%, #0F0517 50%, #09020E 100%);
+  --bg-surface: #1A0A28;
+  --bg-surface-subtle: #250F39;
+  --bg-surface-card: #1E0C30;
+  --bg-pill: #2F1449;
+  --bg-pill-hover: #3E1B5F;
 
-  --text-primary: #DAF1DE;
-  --text-secondary: #8EB69B;
-  --text-muted: #688E75;
+  --text-primary: #F4EEFA;
+  --text-secondary: #B69BD1;
+  --text-muted: #8E72AA;
 
-  --border-color: #1B443C;
-  --border-subtle: #133830;
-  --border-dark: #DAF1DE;
+  --border-color: #3E1B5F;
+  --border-subtle: #2C1144;
+  --border-dark: #F4EEFA;
 
-  --brand-cobalt: #8EB69B;
-  --brand-cobalt-hover: #DAF1DE;
-  --brand-cobalt-light: #163832;
-  --brand-cobalt-rgb: 142, 182, 155;
+  --brand-cobalt: #B69BD1;
+  --brand-cobalt-hover: #F4EEFA;
+  --brand-cobalt-light: #261038;
+  --brand-cobalt-rgb: 182, 155, 209;
 
-  --brand-purple: #DAF1DE;
-  --brand-purple-hover: #DAF1DE;
-  --brand-purple-light: #163832;
-  --brand-purple-rgb: 218, 241, 222;
+  --brand-purple: #F4EEFA;
+  --brand-purple-hover: #F4EEFA;
+  --brand-purple-light: #261038;
+  --brand-purple-rgb: 244, 238, 250;
 
-  --accent-green: #8EB69B;
-  --accent-green-soft: #DAF1DE;
-  --accent-lamp: #DAF1DE;
-  --accent-lamp-glow: rgba(218, 241, 222, 0.25);
+  --accent-green: #B69BD1;
+  --accent-green-soft: #F4EEFA;
+  --accent-lamp: #F4EEFA;
+  --accent-lamp-glow: rgba(244, 238, 250, 0.25);
 
-  --btn-primary-bg: #8EB69B;
-  --btn-primary-text: #051F20;
+  --btn-primary-bg: #B69BD1;
+  --btn-primary-text: #0F0517;
   --btn-secondary-bg: transparent;
-  --btn-secondary-text: #DAF1DE;
-  --btn-secondary-border: #8EB69B;
+  --btn-secondary-text: #F4EEFA;
+  --btn-secondary-border: #B69BD1;
 
-  --banner-gradient: linear-gradient(135deg, #031415 0%, #051F20 45%, #0B2B26 80%, #163832 100%);
-  --banner-gradient-subtle: linear-gradient(145deg, #051F20 0%, #0B2B26 50%, #163832 100%);
-  --ambient-beam: radial-gradient(ellipse at 15% 10%, rgba(142, 182, 155, 0.2) 0%, transparent 60%);
+  --banner-gradient: linear-gradient(135deg, #09020E 0%, #14081E 45%, #261038 80%, #411B5E 100%);
+  --banner-gradient-subtle: linear-gradient(145deg, #14081E 0%, #261038 50%, #411B5E 100%);
+  --ambient-beam: radial-gradient(ellipse at 15% 10%, rgba(182, 155, 209, 0.22) 0%, transparent 60%);
 
   /* Floating Navbar Tokens — Dark Mode */
-  --nav-bar-bg: rgba(11, 43, 38, 0.94);
-  --nav-border: rgba(142, 182, 155, 0.22);
-  --nav-brand-color: #DAF1DE;
-  --nav-btn-color: #8EB69B;
-  --nav-btn-hover: #DAF1DE;
-  --nav-btn-active-bg: #8EB69B;
-  --nav-btn-active-text: #051F20;
-  --nav-divider-color: rgba(142, 182, 155, 0.18);
-  --nav-control-bg: rgba(142, 182, 155, 0.1);
-  --nav-control-hover: rgba(142, 182, 155, 0.2);
-  --nav-shadow: 0 10px 32px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(142, 182, 155, 0.15);
+  --nav-bar-bg: rgba(26, 10, 40, 0.94);
+  --nav-border: rgba(182, 155, 209, 0.22);
+  --nav-brand-color: #F4EEFA;
+  --nav-btn-color: #B69BD1;
+  --nav-btn-hover: #F4EEFA;
+  --nav-btn-active-bg: #B69BD1;
+  --nav-btn-active-text: #0F0517;
+  --nav-divider-color: rgba(182, 155, 209, 0.18);
+  --nav-control-bg: rgba(182, 155, 209, 0.1);
+  --nav-control-hover: rgba(182, 155, 209, 0.2);
+  --nav-shadow: 0 10px 32px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(182, 155, 209, 0.15);
 }
