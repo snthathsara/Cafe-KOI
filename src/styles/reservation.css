@@ -61,8 +61,8 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #25D366;
-  box-shadow: 0 0 8px rgba(37, 211, 102, 0.8);
+  background-color: #682C96;
+  box-shadow: 0 0 8px rgba(104, 44, 150, 0.8);
   animation: pulseDot 2s infinite;
 }
 
@@ -129,39 +129,39 @@
 
 /* Specific Channel Accents */
 .direct-channel-btn.is-whatsapp {
-  background: linear-gradient(135deg, rgba(37, 211, 102, 0.08) 0%, var(--bg-surface-card) 65%);
-  border-color: rgba(37, 211, 102, 0.32);
+  background: linear-gradient(135deg, rgba(104, 44, 150, 0.08) 0%, var(--bg-surface-card) 65%);
+  border-color: rgba(104, 44, 150, 0.28);
 }
 
 .direct-channel-btn.is-whatsapp:hover {
-  border-color: #25D366;
-  background: linear-gradient(135deg, rgba(37, 211, 102, 0.16) 0%, var(--bg-surface-card) 65%);
+  border-color: var(--brand-purple);
+  background: linear-gradient(135deg, rgba(104, 44, 150, 0.16) 0%, var(--bg-surface-card) 65%);
 }
 
 .direct-channel-btn.is-whatsapp .direct-channel-icon {
-  background: #25D366;
-  color: #FFFFFF;
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+  background: #411B5E;
+  color: #F4EEFA;
+  box-shadow: 0 6px 16px rgba(65, 27, 94, 0.35);
 }
 
 .direct-channel-btn.is-whatsapp .direct-channel-icon svg {
-  fill: #FFFFFF;
+  fill: #F4EEFA;
 }
 
 .direct-channel-btn.is-instagram {
-  background: linear-gradient(135deg, rgba(225, 48, 108, 0.06) 0%, var(--bg-surface-card) 65%);
-  border-color: rgba(225, 48, 108, 0.25);
+  background: linear-gradient(135deg, rgba(104, 44, 150, 0.08) 0%, var(--bg-surface-card) 65%);
+  border-color: rgba(104, 44, 150, 0.28);
 }
 
 .direct-channel-btn.is-instagram:hover {
-  border-color: #E1306C;
-  background: linear-gradient(135deg, rgba(225, 48, 108, 0.14) 0%, var(--bg-surface-card) 65%);
+  border-color: var(--brand-purple);
+  background: linear-gradient(135deg, rgba(104, 44, 150, 0.16) 0%, var(--bg-surface-card) 65%);
 }
 
 .direct-channel-btn.is-instagram .direct-channel-icon {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  color: #FFFFFF;
-  box-shadow: 0 6px 16px rgba(225, 48, 108, 0.3);
+  background: #411B5E;
+  color: #F4EEFA;
+  box-shadow: 0 6px 16px rgba(65, 27, 94, 0.3);
 }
 
 .direct-channel-btn.is-cakes {

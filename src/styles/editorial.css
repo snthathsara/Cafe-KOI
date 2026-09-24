@@ -1064,10 +1064,10 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #25D366;
-  color: #14081E;
+  background: #411B5E;
+  color: #F4EEFA;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 2px 8px rgba(65, 27, 94, 0.35);
 }
 
 .whatsapp-icon-circle svg {
@@ -1083,21 +1083,21 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: #25D366;
+  background: #682C96;
   border: 1.5px solid var(--brand-deep);
-  box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  box-shadow: 0 0 0 0 rgba(104, 44, 150, 0.7);
   animation: waPulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
 }
 
 @keyframes waPulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    box-shadow: 0 0 0 0 rgba(104, 44, 150, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 6px rgba(37, 211, 102, 0);
+    box-shadow: 0 0 0 6px rgba(104, 44, 150, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    box-shadow: 0 0 0 0 rgba(104, 44, 150, 0);
   }
 }
 
